@@ -1,0 +1,13 @@
+.Header {
+  border-bottom: 2px solid lemonchiffon;
+  padding: 1rem;
+  text-align: right;
+}
+
+.HeaderList {
+  list-style-type: none;
+}
+
+.HeaderItem {
+  margin: 0 0 1rem;
+}
