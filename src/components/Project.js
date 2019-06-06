@@ -1,7 +1,11 @@
 import React from "react";
 
-function Project({ match }) {
-  return <div>{project.name}</div>;
+function Project(props) {
+  return (
+    <div>
+      <p>{props.params}</p>
+    </div>
+  );
 }
 
 export default Project;

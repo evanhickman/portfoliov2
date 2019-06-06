@@ -5,6 +5,7 @@ import "./Header.css";
 function Header() {
   return (
     <div className="Header">
+      <h1 className="HeaderLogo">EVAN HICKMAN</h1>
       <ul className="HeaderList">
         <li className="HeaderItem">
           <Link to="/">Home</Link>
