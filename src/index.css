@@ -10,9 +10,11 @@
 }
 
 :root {
-	--bg-color: rgb(233, 150, 122);
-	--body-color: rgb(37, 37, 37);
-	--link-color: rgb(255, 250, 205);
+	--bg-color: hsl(0, 0%, 11%);
+	--body-color: hsl(180, 20%, 99%);
+	--link-color: hsl(339, 81%, 85%);
+	--link-color-lite: hsl(340, 80%, 94%);
+	--aux-color: hsl(210, 12%, 57%);
 }
 
 html, body, div, span, applet, object, iframe,
@@ -51,7 +53,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
 		sans-serif;
-	line-height: 1;
+	line-height: 1.2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -59,6 +61,15 @@ body {
 a {
 	color: var(--link-color);
 	text-decoration: none;
+	transition: color .2s ease-in-out;
+}
+
+a:hover {
+	color: var(--link-color-lite);
+}
+
+img {
+	max-width: 100%;
 }
 
 ol, ul {

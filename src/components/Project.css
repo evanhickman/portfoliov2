@@ -1,0 +1,24 @@
+.ProjectImg {
+  max-width: 100%;
+}
+
+.ProjectLink {
+  margin: .5rem 0 0;
+  text-align: right;
+}
+
+.ProjectName {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 1rem 0;
+}
+
+.ProjectTech {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+
+.ProjectDesc {
+  line-height: 1.5;
+}

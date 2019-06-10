@@ -1,0 +1,34 @@
+.Projects {
+  display: flex;
+  padding: 1rem;
+}
+
+.ProjectsList {
+  border-right: 1px solid var(--aux-color);
+  display: flex;
+  flex-basis: 25%;
+  flex-direction: column;
+  padding: 0 1rem 0 0;
+}
+
+.ProjectsListItem {
+  margin: .5rem 0;
+}
+
+.ProjectsListItem .active {
+  color: var(--link-color-lite);
+}
+
+.ProjectsListItem .active::after {
+  content: " \2192";
+}
+
+.ProjectsRoutes {
+  flex-basis: 75%;
+  margin: 0 0 0 1rem;
+}
+
+.ProjectsPrompt {
+  color: var(--aux-color);
+  text-align: center;
+}

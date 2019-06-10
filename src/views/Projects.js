@@ -1,7 +1,8 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Route, NavLink } from "react-router-dom";
 import Project from "../components/Project";
 import { projects } from "../api";
+import "./Projects.css";
 
 class Projects extends React.Component {
   state = {
@@ -20,37 +21,68 @@ class Projects extends React.Component {
     }
 
     return (
-      <div>
-        <ul>
-          <li>
-            <Link to={`${this.props.match.url}/third-man-records`}>
-              Third Man Records
-            </Link>
+      <div className="Projects">
+        <ul className="ProjectsList">
+          <li className="ProjectsListItem">
+            <NavLink
+              to={`${this.props.match.url}/third-man-records`}
+              activeClassName="active"
+            >
+              thirdmanrecords.com
+            </NavLink>
           </li>
-          <li>
-            <Link to={`${this.props.match.url}/the-raconteurs`}>
-              The Raconteurs
-            </Link>
+          <li className="ProjectsListItem">
+            <NavLink
+              to={`${this.props.match.url}/the-raconteurs`}
+              activeClassName="active"
+            >
+              theraconteurs.com
+            </NavLink>
           </li>
-          <li>
-            <Link to={`${this.props.match.url}/jack-white`}>Jack White</Link>
+          <li className="ProjectsListItem">
+            <NavLink
+              to={`${this.props.match.url}/jack-white`}
+              activeClassName="active"
+            >
+              jackwhiteiii.com
+            </NavLink>
           </li>
-          <li>
-            <Link to={`${this.props.match.url}/third-man-pressing`}>
-              Third Man Pressing
-            </Link>
+          <li className="ProjectsListItem">
+            <NavLink
+              to={`${this.props.match.url}/third-man-pressing`}
+              activeClassName="active"
+            >
+              thirdmanpressing.com
+            </NavLink>
           </li>
         </ul>
 
-        <Route
-          exact
-          path={this.props.match.path}
-          render={() => <h3>Please select a project</h3>}
-        />
-        <Route
-          path={`${this.props.match.path}/:projectId`}
-          render={props => <Project params={this.props.match.params} />}
-        />
+        <div className="ProjectsRoutes">
+          <Route
+            exact
+            path={this.props.match.path}
+            render={() => <h2 className="ProjectsPrompt">Select a project</h2>}
+          />
+
+          {this.state.pages.map(page => {
+            return (
+              <Route
+                path={`${this.props.match.path}/${page.id}`}
+                key={page.id}
+                render={props => (
+                  <Project
+                    {...props}
+                    name={page.name}
+                    image={page.imgPath}
+                    desc={page.desc}
+                    link={page.link}
+                    tech={page.tech}
+                  />
+                )}
+              />
+            );
+          })}
+        </div>
       </div>
     );
   }

@@ -1,0 +1,28 @@
+.Home {
+  padding: 1rem;
+}
+
+.HomeTitle {
+  color: var(--link-color);
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 200;
+  margin: 2rem 0 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.HomeCta {
+  border: 1px solid var(--link-color);
+  border-radius: 4px;
+  color: var(--link-color);
+  display: table;
+  margin: 1rem auto;
+  padding: .5rem;
+  transition: border .2s ease-in-out, color .2s ease-in-out;
+}
+
+.HomeCta:hover {
+  border: 1px solid var(--link-color-lite);
+  color: var(--link-color-lite);
+}

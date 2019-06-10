@@ -1,6 +1,5 @@
 .Header {
   align-items: center;
-  border-bottom: 2px solid var(--link-color);
   display: flex;
   justify-content: space-between;
   padding: 1rem;
@@ -9,15 +8,34 @@
 
 .HeaderLogo {
   color: var(--link-color);
+  flex-basis: 50%;
   font-size: 4rem;
   font-style: italic;
   font-weight: 800;
+  text-align: left;
+}
+
+.HeaderLogo > a {
+  border-bottom: 0;
+}
+
+.HeaderLogo img {
+  max-height: 8rem;
 }
 
 .HeaderList {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: center;
   list-style-type: none;
 }
 
 .HeaderItem {
-  margin: 0 0 1rem;
+  font-style: italic;
+  font-weight: 200;
+  margin: 0 0 0 4rem;
+}
+
+.HeaderItem .active {
+  color: var(--link-color-lite);
 }
