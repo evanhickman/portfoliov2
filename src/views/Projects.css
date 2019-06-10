@@ -1,14 +1,12 @@
 .Projects {
-  display: flex;
   padding: 1rem;
 }
 
 .ProjectsList {
-  border-right: 1px solid var(--aux-color);
+  border-bottom: 1px solid var(--aux-color);
   display: flex;
-  flex-basis: 25%;
   flex-direction: column;
-  padding: 0 1rem 0 0;
+  padding: 0 0 1.5rem;
 }
 
 .ProjectsListItem {
@@ -19,16 +17,43 @@
   color: var(--link-color-lite);
 }
 
-.ProjectsListItem .active::after {
-  content: " \2192";
-}
-
 .ProjectsRoutes {
-  flex-basis: 75%;
-  margin: 0 0 0 1rem;
+  margin: 1rem 0;
 }
 
 .ProjectsPrompt {
   color: var(--aux-color);
+  margin: 2rem 0 0;
   text-align: center;
+}
+
+/* Tablet and up */
+@media (min-width: 600px) {
+  .Projects {
+    display: flex;
+  }
+
+  .ProjectsList {
+    border-bottom: 0;
+    border-right: 1px solid var(--aux-color);
+    flex-basis: 25%;
+    padding: 0 1rem 0 0;
+  }
+
+  .ProjectsListItem {
+    margin: .5rem 0;
+  }
+
+  .ProjectsListItem .active::after {
+    content: " \2192";
+  }
+
+  .ProjectsRoutes {
+    flex-basis: 75%;
+    margin: 0 0 0 1rem;
+  }
+
+  .ProjectsPrompt {
+    margin: 0;
+  }
 }

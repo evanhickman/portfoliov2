@@ -28,7 +28,7 @@ class Projects extends React.Component {
               to={`${this.props.match.url}/third-man-records`}
               activeClassName="active"
             >
-              thirdmanrecords.com
+              Third Man Records
             </NavLink>
           </li>
           <li className="ProjectsListItem">
@@ -36,7 +36,7 @@ class Projects extends React.Component {
               to={`${this.props.match.url}/the-raconteurs`}
               activeClassName="active"
             >
-              theraconteurs.com
+              The Raconteurs
             </NavLink>
           </li>
           <li className="ProjectsListItem">
@@ -44,7 +44,7 @@ class Projects extends React.Component {
               to={`${this.props.match.url}/jack-white`}
               activeClassName="active"
             >
-              jackwhiteiii.com
+              Jack White
             </NavLink>
           </li>
           <li className="ProjectsListItem">
@@ -52,7 +52,7 @@ class Projects extends React.Component {
               to={`${this.props.match.url}/third-man-pressing`}
               activeClassName="active"
             >
-              thirdmanpressing.com
+              Third Man Pressing
             </NavLink>
           </li>
         </ul>

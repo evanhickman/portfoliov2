@@ -4,7 +4,6 @@
 
 .ProjectLink {
   margin: .5rem 0 0;
-  text-align: right;
 }
 
 .ProjectName {
@@ -21,4 +20,11 @@
 
 .ProjectDesc {
   line-height: 1.5;
+}
+
+/* Tablets and up */
+@media (min-width: 600px) {
+  .ProjectLink {
+    text-align: right;
+  }
 }

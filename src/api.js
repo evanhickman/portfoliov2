@@ -5,7 +5,7 @@ export const projects = [
     link: "https://thirdmanrecords.com",
     imgPath: "/images/tmr-home.png",
     tech: "SilverStripe, HTML5, CSS3, JavaScript, jQuery, Responsive Design",
-    desc: "Full frontend redesign over legacy SilverStripe codebase."
+    desc: "Full frontend redesign."
   },
   {
     name: "The Raconteurs",

@@ -49,7 +49,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-	color: var(--body-color);
+	color: var(--link-color-lite);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
 		sans-serif;
