@@ -68,6 +68,10 @@ a:hover {
 	color: var(--link-color-lite);
 }
 
+a:focus {
+	outline-color: var(--link-color);
+}
+
 img {
 	max-width: 100%;
 }
