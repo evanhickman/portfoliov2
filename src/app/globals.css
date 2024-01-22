@@ -16,14 +16,17 @@
   }
 }
 
+html {
+  @apply box-border;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: var(--background-start-rgb);
+}
+
+.section {
+  @apply p-8;
 }
 
 @layer utilities {
