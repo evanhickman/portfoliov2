@@ -1,24 +1,20 @@
-// import Link from 'next/link';
-import Box from './components/box';
-
-// const imgStyle: React.CSSProperties = {
-//   position: 'absolute',
-//   top: 0,
-//   left: '50%',
-//   width: '50vw',
-//   height: '100vh',
-// };
-
-export default function Home() {
+const Home = () => {
   return (
-    <main className='hero-main min-h-screen min-w-screen flex bg-neutral-900 relative'>
-      <section className='w-50-screen pl-20 py-5'>
-        <h1 className='text-7xl'>Evan Hickman</h1>
-        <h2 className='text-4xl'>Frontend Developer</h2>
+    <main className='min-h-screen min-w-screen flex bg-neutral-900 relative'>
+      <section className='basis-6/12 flex flex-col justify-center pl-20 py-5'>
+        <h1 className='text-8xl text-animation'>Evan Hickman</h1>
+        <h2 className='text-5xl text-animation'>UX Developer / Designer</h2>
       </section>
-      <section className='w-50-screen'>
-        <Box />
+      <section className='basis-6/12 grid grid-cols-1 grid-rows-6 gap-1.5'>
+        <div className='box-one'></div>
+        <div className='box-two'></div>
+        <div className='box-three'></div>
+        <div className='box-four'></div>
+        <div className='box-five'></div>
+        <div className='box-six'></div>
       </section>
     </main>
   );
-}
+};
+
+export default Home;

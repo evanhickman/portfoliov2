@@ -3,9 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --animation1: COLOR_SHIFT_1 20s cubic-bezier(0, -0.4, 1, 1.35) infinite;
+  --animation2: COLOR_SHIFT_2 20s cubic-bezier(0, -0.4, 1, 1.35) infinite;
+  --animation3: COLOR_SHIFT_3 20s cubic-bezier(0, -0.4, 1, 1.35) infinite;
+  --animation4: COLOR_SHIFT_4 20s cubic-bezier(0, -0.4, 1, 1.35) infinite;
+  --animation5: COLOR_SHIFT_5 20s cubic-bezier(0, -0.4, 1, 1.35) infinite;
+  --animation6: COLOR_SHIFT_6 20s cubic-bezier(0, -0.4, 1, 1.35) infinite;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,12 +24,176 @@ html {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: var(--background-start-rgb);
+  color: theme(colors.cyan.100);
+  background: theme(colors.black.900);
 }
 
-.section {
-  @apply px-20;
+.box-one {
+  animation: var(--animation1);
+}
+
+.box-two {
+  animation: var(--animation2);
+}
+
+.box-three {
+  animation: var(--animation3);
+}
+
+.box-four {
+  animation: var(--animation4);
+}
+
+.box-five {
+  animation: var(--animation5);
+}
+
+.box-six {
+  animation: var(--animation6);
+}
+
+@keyframes COLOR_SHIFT_1 {
+  from {
+    background-color: theme('colors.cyan.100');
+  }
+  15% {
+    background-color: theme('colors.indigo.100');
+  }
+  31% {
+    background-color: theme('colors.purple.100');
+  }
+  46% {
+    background-color: theme('colors.red.100');
+  }
+  61% {
+    background-color: theme('colors.yellow.100');
+  }
+  76% {
+    background-color: theme('colors.green.100');
+  }
+  to {
+    background-color: theme('colors.cyan.100');
+  }
+}
+
+@keyframes COLOR_SHIFT_2 {
+  from {
+    background-color: theme('colors.cyan.200');
+  }
+  15% {
+    background-color: theme('colors.indigo.200');
+  }
+  31% {
+    background-color: theme('colors.purple.200');
+  }
+  46% {
+    background-color: theme('colors.red.200');
+  }
+  61% {
+    background-color: theme('colors.yellow.200');
+  }
+  76% {
+    background-color: theme('colors.green.200');
+  }
+  to {
+    background-color: theme('colors.cyan.200');
+  }
+}
+
+@keyframes COLOR_SHIFT_3 {
+  from {
+    background-color: theme('colors.cyan.300');
+  }
+  15% {
+    background-color: theme('colors.indigo.300');
+  }
+  31% {
+    background-color: theme('colors.purple.300');
+  }
+  46% {
+    background-color: theme('colors.red.300');
+  }
+  61% {
+    background-color: theme('colors.yellow.300');
+  }
+  76% {
+    background-color: theme('colors.green.300');
+  }
+  to {
+    background-color: theme('colors.cyan.300');
+  }
+}
+
+@keyframes COLOR_SHIFT_4 {
+  from {
+    background-color: theme('colors.cyan.400');
+  }
+  15% {
+    background-color: theme('colors.indigo.400');
+  }
+  31% {
+    background-color: theme('colors.purple.400');
+  }
+  46% {
+    background-color: theme('colors.red.400');
+  }
+  61% {
+    background-color: theme('colors.yellow.400');
+  }
+  76% {
+    background-color: theme('colors.green.400');
+  }
+  to {
+    background-color: theme('colors.cyan.400');
+  }
+}
+
+@keyframes COLOR_SHIFT_5 {
+  from {
+    background-color: theme('colors.cyan.500');
+  }
+  15% {
+    background-color: theme('colors.indigo.500');
+  }
+  31% {
+    background-color: theme('colors.purple.500');
+  }
+  46% {
+    background-color: theme('colors.red.500');
+  }
+  61% {
+    background-color: theme('colors.yellow.500');
+  }
+  76% {
+    background-color: theme('colors.green.500');
+  }
+  to {
+    background-color: theme('colors.cyan.500');
+  }
+}
+
+@keyframes COLOR_SHIFT_6 {
+  from {
+    background-color: theme('colors.cyan.600');
+  }
+  15% {
+    background-color: theme('colors.indigo.600');
+  }
+  31% {
+    background-color: theme('colors.purple.600');
+  }
+  46% {
+    background-color: theme('colors.red.600');
+  }
+  61% {
+    background-color: theme('colors.yellow.600');
+  }
+  76% {
+    background-color: theme('colors.green.600');
+  }
+  to {
+    background-color: theme('colors.cyan.600');
+  }
 }
 
 @layer utilities {

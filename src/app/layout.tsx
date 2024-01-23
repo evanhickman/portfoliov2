@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { Urbanist } from 'next/font/google';
 import './globals.css';
 
-import Nav from './components/nav';
+import Header from './components/Header';
 
-const inter = Urbanist({ subsets: ['latin'] });
+const urban = Urbanist({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Evan Hickman',
@@ -19,10 +19,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
-        <header className='section py-20 bg-neutral-900 w-full'>
-          <Nav />
-        </header>
+      <body className={`${urban.className} relative`}>
+        <Header />
         {children}
       </body>
     </html>
