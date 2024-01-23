@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Inter } from 'next/font/google';
+import { Urbanist } from 'next/font/google';
 import './globals.css';
 
 import Nav from './components/nav';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Urbanist({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Evan Hickman',
@@ -20,9 +20,9 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        {/* <header className='section flex justify-between items-center'>
+        <header className='section py-20 bg-neutral-900 w-full'>
           <Nav />
-        </header> */}
+        </header>
         {children}
       </body>
     </html>

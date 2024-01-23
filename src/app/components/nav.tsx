@@ -1,10 +1,12 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import logo from '../../../public/logo.png';
 
 export default function Nav() {
   return (
-    <nav className='basis-6/12'>
+    <nav className='flex justify-between'>
       <div>
-        <Link href='/'>EH</Link>
+        <Image src={logo} alt='logo' />
       </div>
       <ul className='flex justify-end'>
         <li className='pl-8'>

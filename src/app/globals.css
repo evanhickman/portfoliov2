@@ -26,7 +26,7 @@ body {
 }
 
 .section {
-  @apply p-8;
+  @apply px-20;
 }
 
 @layer utilities {
