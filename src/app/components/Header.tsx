@@ -2,9 +2,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../../public/logo.png';
 
-export default function Header() {
+const Header = () => {
   return (
-    <header className='fixed w-full top-0 h-40 px-20 flex flex-col justify-center bg-neutral-900/20 backdrop-blur-md z-50'>
+    <header className='fixed w-full top-0 h-16 px-20 flex flex-col justify-center bg-neutral-900/20 backdrop-blur-md z-50'>
       <nav className='flex justify-between'>
         <div className='basis-6/12'>
           {/* <Image src={logo} alt='logo' /> */}
@@ -12,7 +12,7 @@ export default function Header() {
             EH
           </Link>
         </div>
-        <ul className='flex basis-6/12 justify-center'>
+        <ul className='flex basis-6/12 justify-start pl-40'>
           <li className='pr-8'>
             <Link href='/work' className='text-2xl text-black-900'>
               Work
@@ -27,4 +27,6 @@ export default function Header() {
       </nav>
     </header>
   );
-}
+};
+
+export default Header;
