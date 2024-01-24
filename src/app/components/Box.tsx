@@ -13,7 +13,6 @@ const Box = ({ bgColor, title, description, active }: BoxProps) => {
     <div className={`${bgColor} flex flex-col justify-center`}>
       <div className='pl-40'>
         {title && <h2 className='text-2xl text-black-900'>{title}</h2>}
-        {description && <p className='text-black-900'>{description}</p>}
       </div>
     </div>
   );
