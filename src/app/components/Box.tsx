@@ -1,18 +1,19 @@
 import Link from 'next/link';
 
 type BoxProps = {
-  boxClass: string;
+  bgColor: string;
   title?: string;
   description?: string;
+  link?: string;
   active?: boolean;
 };
 
-const Box = ({ boxClass, title, description, active }: BoxProps) => {
+const Box = ({ bgColor, title, description, active }: BoxProps) => {
   return (
-    <div className={`${boxClass} flex flex-col justify-center border-none`}>
+    <div className={`${bgColor} flex flex-col justify-center`}>
       <div className='pl-40'>
-        {/* {title && <h2 className='text-2xl text-black-900'>{title}</h2>} */}
-        {/* {description && <p>{description}</p>} */}
+        {title && <h2 className='text-2xl text-black-900'>{title}</h2>}
+        {description && <p className='text-black-900'>{description}</p>}
       </div>
     </div>
   );

@@ -5,6 +5,10 @@ import logo from '../../../public/logo.png';
 const Header = () => {
   const navLinks = [
     {
+      name: 'Home',
+      link: '/',
+    },
+    {
       name: 'Work',
       link: '/work',
     },
@@ -12,24 +16,17 @@ const Header = () => {
       name: 'Contact',
       link: '/contact',
     },
-    {
-      name: 'Resume',
-      link: '/resume',
-    },
   ];
 
+  // bg-neutral-900/20 backdrop-blur-md
+
   return (
-    <header className='fixed w-full top-0 h-16 px-20 flex flex-col justify-center bg-neutral-900/20 backdrop-blur-md z-50'>
-      <nav className='flex justify-between'>
-        <div className='basis-6/12'>
-          <Link href='/' className='text-2xl'>
-            EH
-          </Link>
-        </div>
-        <ul className='flex basis-6/12 justify-center'>
+    <header className='fixed w-full top-0 h-16 px-20 flex flex-col justify-center z-50'>
+      <nav>
+        <ul className='flex'>
           {navLinks.map((link) => (
-            <li className='px-8' key={link.link}>
-              <Link href={link.link} className='text-2xl text-black-900'>
+            <li className='pr-8' key={link.link}>
+              <Link href={link.link} className='text-2xl text-black-50'>
                 {link.name}
               </Link>
             </li>

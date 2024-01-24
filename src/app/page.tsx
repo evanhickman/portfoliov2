@@ -16,7 +16,7 @@ const Home = () => {
       </section>
       <section className='basis-6/12 grid grid-cols-1 grid-rows-6 gap-1.5'>
         {boxes.map((box) => (
-          <Box boxClass={`${box}`} key={box} />
+          <Box bgColor={`${box}`} key={box} />
         ))}
       </section>
     </main>
