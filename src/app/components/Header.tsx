@@ -11,7 +11,7 @@ const Header = () => {
             EH
           </Link>
         </div>
-        <ul className='flex basis-6/12 justify-start pl-20'>
+        <ul className='flex basis-6/12 justify-center'>
           <li className='pr-8'>
             <Link href='/work' className='text-2xl text-black-900'>
               Work
@@ -20,6 +20,11 @@ const Header = () => {
           <li className='pl-8'>
             <Link href='/contact' className='text-2xl text-black-900'>
               Contact
+            </Link>
+          </li>
+          <li className='pl-8'>
+            <Link href='/resume' className='text-2xl text-black-900'>
+              Resume
             </Link>
           </li>
         </ul>
