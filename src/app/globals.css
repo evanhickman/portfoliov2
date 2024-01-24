@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --animation1: COLOR_SHIFT_1 20s cubic-bezier(0, -0.4, 1, 1.35) infinite;
-  --animation2: COLOR_SHIFT_2 20s cubic-bezier(0, -0.4, 1, 1.35) infinite;
-  --animation3: COLOR_SHIFT_3 20s cubic-bezier(0, -0.4, 1, 1.35) infinite;
-  --animation4: COLOR_SHIFT_4 20s cubic-bezier(0, -0.4, 1, 1.35) infinite;
-  --animation5: COLOR_SHIFT_5 20s cubic-bezier(0, -0.4, 1, 1.35) infinite;
-  --animation6: COLOR_SHIFT_6 20s cubic-bezier(0, -0.4, 1, 1.35) infinite;
+  --animation1: COLOR_SHIFT_1 24s cubic-bezier(0, -0.4, 1, 1.35) infinite;
+  --animation2: COLOR_SHIFT_2 24s cubic-bezier(0, -0.4, 1, 1.35) infinite;
+  --animation3: COLOR_SHIFT_3 24s cubic-bezier(0, -0.4, 1, 1.35) infinite;
+  --animation4: COLOR_SHIFT_4 24s cubic-bezier(0, -0.4, 1, 1.35) infinite;
+  --animation5: COLOR_SHIFT_5 24s cubic-bezier(0, -0.4, 1, 1.35) infinite;
+  --animation6: COLOR_SHIFT_6 24s cubic-bezier(0, -0.4, 1, 1.35) infinite;
 }
 
 @media (prefers-color-scheme: dark) {

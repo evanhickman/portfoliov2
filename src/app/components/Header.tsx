@@ -7,12 +7,11 @@ const Header = () => {
     <header className='fixed w-full top-0 h-16 px-20 flex flex-col justify-center bg-neutral-900/20 backdrop-blur-md z-50'>
       <nav className='flex justify-between'>
         <div className='basis-6/12'>
-          {/* <Image src={logo} alt='logo' /> */}
           <Link href='/' className='text-2xl text-cyan-100'>
             EH
           </Link>
         </div>
-        <ul className='flex basis-6/12 justify-start pl-40'>
+        <ul className='flex basis-6/12 justify-start pl-20'>
           <li className='pr-8'>
             <Link href='/work' className='text-2xl text-black-900'>
               Work
