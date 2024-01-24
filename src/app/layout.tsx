@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { DM_Sans } from 'next/font/google';
+import { Urbanist } from 'next/font/google';
 import './globals.css';
 
 import Header from './components/Header';
 
-const sans = DM_Sans({ subsets: ['latin'] });
+const urban = Urbanist({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Evan Hickman',
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${sans.className} relative`}>
+      <body className={`${urban.className} relative`}>
         <Header />
         {children}
       </body>
