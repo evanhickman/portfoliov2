@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     colors: {
       transparent: 'transparent',
+      white: colors.white,
       black: colors.neutral,
       cyan: colors.cyan,
       indigo: colors.indigo,

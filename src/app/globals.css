@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  color: theme(colors.cyan.100);
+  color: theme(colors.white);
   background: theme(colors.black.900);
 }
 

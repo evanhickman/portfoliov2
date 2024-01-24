@@ -8,43 +8,13 @@ export default function Work() {
   useEffect(() => {});
 
   const boxes = [
-    { class: 'bg-cyan-100', title: '', description: '', active: false },
-    {
-      class: 'bg-cyan-200',
-      title: 'Jane Seller Dashboard',
-      description: '',
-      active: false,
-    },
-    {
-      class: 'bg-cyan-300',
-      title: 'Marigold Relationship Marketing',
-      description: '',
-      active: false,
-    },
-    {
-      class: 'bg-cyan-400',
-      title: 'Third Man Records',
-      description: '',
-      active: false,
-    },
-    {
-      class: 'bg-cyan-500',
-      title: 'Jack White',
-      description: '',
-      active: false,
-    },
-    {
-      class: 'bg-cyan-600',
-      title: 'The Raconteurs',
-      description: '',
-      active: false,
-    },
-    {
-      class: 'bg-cyan-700',
-      title: 'Third Man Pressing',
-      description: '',
-      active: false,
-    },
+    { class: 'bg-cyan-100' },
+    { class: 'bg-cyan-200' },
+    { class: 'bg-cyan-300' },
+    { class: 'bg-cyan-400' },
+    { class: 'bg-cyan-500' },
+    { class: 'bg-cyan-600' },
+    { class: 'bg-cyan-700' },
   ];
   return (
     <main className='min-h-screen w-full flex bg-neutral-900 relative'>
@@ -53,12 +23,7 @@ export default function Work() {
       </section>
       <section className='basis-6/12 grid grid-cols-1 grid-rows-7 gap-1.5'>
         {boxes.map((box) => (
-          <Box
-            title={box.title}
-            boxClass={`${box.class}`}
-            active={box.active}
-            key={box.class}
-          />
+          <Box boxClass={`${box.class}`} key={box.class} />
         ))}
       </section>
       <div className='absolute top-16 right-0 w-full h-[calc(100vh-4rem)] flex justify-end bg-neutral-900/50 backdrop-blur-md z-20'>
