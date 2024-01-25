@@ -29,6 +29,14 @@ body {
   background: theme(colors.black.900);
 }
 
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* BEGIN ANIMATIONS */
+
 .box-one {
   animation: var(--animation1);
 }
@@ -225,8 +233,4 @@ body {
   }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+/* END ANIMATIONS */

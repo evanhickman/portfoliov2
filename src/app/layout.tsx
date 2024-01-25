@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { Urbanist } from 'next/font/google';
 import './globals.css';
 
