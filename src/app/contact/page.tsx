@@ -15,6 +15,7 @@ const Contact = () => {
     },
     {
       bgColor: 'bg-green-400',
+      title: 'Coming soon...',
     },
     {
       bgColor: 'bg-green-500',
@@ -39,7 +40,12 @@ const Contact = () => {
       </motion.section>
       <section className='basis-6/12 grid grid-cols-1 grid-rows-7 gap-1.5'>
         {boxes.map((box, index) => (
-          <Box bgColor={`${box.bgColor}`} key={box.bgColor} index={index} />
+          <Box
+            bgColor={`${box.bgColor}`}
+            key={box.bgColor}
+            title={box?.title}
+            index={index}
+          />
         ))}
       </section>
     </main>
