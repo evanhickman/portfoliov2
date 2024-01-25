@@ -13,7 +13,7 @@ const Box = ({ bgColor, title, description, link, index }: BoxProps) => {
   return (
     <AnimatePresence>
       <motion.div
-        className={`${bgColor} flex flex-col justify-center`}
+        className={`${bgColor} flex flex-col justify-center row-span-1`}
         animate={{ x: 0 }}
         initial={{ x: '100%' }}
         transition={{ duration: 0.5, delay: index * 0.1 }}

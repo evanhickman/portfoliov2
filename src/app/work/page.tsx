@@ -1,9 +1,11 @@
 'use client';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { workDataArray } from './data';
 import Box from '../components/Box';
 
 const Work = () => {
+  const [expanded, setExpanded] = useState(0);
   return (
     <main className='min-h-screen w-full flex bg-neutral-900 relative'>
       <motion.section
