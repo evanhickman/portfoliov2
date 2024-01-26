@@ -1,7 +1,6 @@
 'use client';
-import { use, useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-import { BoxItem } from '../box-data';
+import { AnimatePresence, motion, useTransform } from 'framer-motion';
+import { useState } from 'react';
 
 type BoxProps = {
   title?: string;
@@ -9,7 +8,7 @@ type BoxProps = {
   link?: string;
   id: number;
   classNames: string;
-  activeBox: null | number;
+  expanded: boolean;
   onClick: (id: number) => void;
 };
 
@@ -19,36 +18,47 @@ const Box = ({
   link,
   id,
   classNames,
-  activeBox,
+  expanded,
   onClick,
 }: BoxProps) => {
   const variants = {
     initial: {
       x: '100%',
-      gridRow: 'span 1',
+      opacity: 1,
+      flexGrow: '1',
+      layout: true,
     },
-    default: {
+    expanded: {
       x: '0',
-      gridRow: 'span 1',
-      transition: { type: 'spring', duration: 0.5, delay: id * 0.1 },
+      opacity: 1,
+      flexGrow: '1',
+      transition: {
+        type: 'spring',
+        duration: 0.5,
+        delay: id * 0.1,
+      },
+      layout: true,
     },
-    active: {
-      x: '0',
-      gridRow: `span 50`,
-      transition: { type: 'spring', duration: 1, delay: 0, layout: true },
-    },
-    inactive: {
+    contracted: {
       x: '100%',
-      gridRow: 'span 1',
-      transition: { type: 'spring', duration: 0.5, delay: id * 0.1 },
+      opacity: 0,
+      transition: {
+        type: 'spring',
+        duration: 0.5,
+        delay: id * 0.1,
+      },
+      transitionEnd: {
+        height: '0',
+        flexGrow: '0',
+      },
+      layout: true,
     },
   };
 
   return (
     <AnimatePresence>
       <motion.div
-        className={`${classNames} flex flex-col justify-center row-span-1 cursor-pointer z-10`}
-        layout
+        className={`${classNames} flex-1 flex flex-col justify-center cursor-pointer z-10`}
         initial='initial'
         animate={
           activeBox === null
@@ -57,12 +67,6 @@ const Box = ({
             ? variants.active
             : variants.inactive
         }
-        transition={{
-          type: 'spring',
-          duration: 0.6,
-          delay: id * 0.1,
-        }}
-        exit={{ x: '100%' }}
         onClick={() => onClick(id)}
         key={id}
         variants={variants}

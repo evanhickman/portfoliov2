@@ -15,7 +15,7 @@ const BoxContainer = ({ boxes }: BoxContainerProps) => {
   };
 
   return (
-    <section className={`grid grid-cols-1 grid-rows-${boxes.length} gap-1.5`}>
+    <section className={`flex flex-col gap-1.5`}>
       {boxes.map((box) => (
         <Box
           id={box?.id}
@@ -23,7 +23,7 @@ const BoxContainer = ({ boxes }: BoxContainerProps) => {
           classNames={box?.classNames}
           key={box.id}
           onClick={onClick}
-          activeBox={activeBox}
+          expanded={activeBox === box.id}
         />
       ))}
     </section>
