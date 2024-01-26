@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import logo from '../../../public/logo.png';
+import Link from 'next/link'
+import Image from 'next/image'
+import logo from '../../../public/logo.png'
 
 const Header = () => {
   const navLinks = [
@@ -16,17 +16,17 @@ const Header = () => {
       name: 'Contact',
       link: '/contact',
     },
-  ];
+  ]
 
   // bg-neutral-900/20 backdrop-blur-md
 
   return (
-    <header className='fixed w-full top-0 h-16 px-20 flex flex-col justify-center z-50'>
+    <header className="fixed w-screen top-0 h-16 px-9 lg:px-24 flex flex-col justify-center z-30 bg-transparent backdrop-blur-lg">
       <nav>
-        <ul className='flex'>
+        <ul className="flex justify-between lg:justify-start">
           {navLinks.map((link) => (
-            <li className='pr-8' key={link.link}>
-              <Link href={link.link} className='text-2xl text-black-50'>
+            <li className="pr-0 lg:pr-8" key={link.link}>
+              <Link href={link.link} className="text-2xl text-black-50">
                 {link.name}
               </Link>
             </li>
@@ -34,7 +34,7 @@ const Header = () => {
         </ul>
       </nav>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
