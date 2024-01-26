@@ -9,8 +9,8 @@ type BoxProps = {
   link?: string;
   id: number;
   classNames: string;
-  onClick: () => void;
   isActive: boolean;
+  onClick: (id: number) => void;
 };
 
 const Box = ({
@@ -20,7 +20,9 @@ const Box = ({
   id,
   classNames,
   isActive,
+  onClick,
 }: BoxProps) => {
+  console.log(isActive);
   const variants = {
     visible: {
       x: '0',
@@ -38,14 +40,16 @@ const Box = ({
     <AnimatePresence>
       <motion.div
         className={`${classNames} flex flex-col justify-center row-span-1 cursor-pointer z-10`}
-        initial={{ x: '100%' }}
-        animate={{ x: 0 }}
+        initial={{ x: '100%', gridRow: 'span 1' }}
+        animate={isActive ? variants.active : variants.visible}
         transition={{
           type: 'spring',
           duration: 0.6,
           delay: id * 0.1,
         }}
         exit={{ x: '100%' }}
+        variants={variants}
+        onClick={() => onClick(id)}
       >
         <div className='pl-40'>
           {title && <h2 className='text-2xl text-black-900'>{title}</h2>}
