@@ -1,8 +1,7 @@
 'use client';
-import PageTitle from './components/ContentContainer';
-import BoxContainer from './components/BoxContainer';
-import { homeBoxes as boxes } from './box-data';
-import ContentContainer from './components/ContentContainer';
+import BoxContainer from '@/app/components/box';
+import ContentContainer from '@/app/components/ContentContainer';
+import { homeBoxes as boxes } from './components/box/box-data';
 
 const Home = () => {
   return (

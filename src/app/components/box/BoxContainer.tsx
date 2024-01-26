@@ -1,7 +1,5 @@
-import { useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-import { BoxItem } from '../box-data';
-import Box from './Box';
+import Box from '@/app/components/box/Box';
+import { BoxItem } from '@/app/components/box/box-data';
 
 interface BoxContainerProps {
   boxes: BoxItem[];

@@ -1,7 +1,7 @@
 'use client';
-import ContentContainer from '../components/ContentContainer';
-import BoxContainer from '../components/BoxContainer';
-import { workBoxes as boxes } from '../box-data';
+import ContentContainer from '@/app/components/ContentContainer';
+import BoxContainer from '@/app/components/box';
+import { workBoxes as boxes } from '../components/box/box-data';
 import { useState } from 'react';
 
 const Work = () => {

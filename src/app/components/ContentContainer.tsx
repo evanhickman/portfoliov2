@@ -1,6 +1,6 @@
 'use client';
 import { AnimatePresence, motion } from 'framer-motion';
-import { BoxItem } from '../box-data';
+import { BoxItem } from './box/box-data';
 
 interface ContentContainerProps {
   heading: string;

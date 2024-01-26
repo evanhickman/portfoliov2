@@ -1,13 +1,14 @@
 'use client';
-import PageTitle from '../components/ContentContainer';
-import BoxContainer from '../components/BoxContainer';
-import { contactBoxes as boxes } from '../box-data';
+import PageTitle from '@/app/components/ContentContainer';
+import BoxContainer from '@/app/components/box';
+import { contactBoxes as boxes } from '@/app/components/box';
 
 const Contact = () => {
   return (
     <main>
+      {/* @ts-ignore */}
       <PageTitle heading='Contact' />
-      <BoxContainer boxes={boxes} />
+      <BoxContainer boxes={boxes} active={null} />
     </main>
   );
 };
