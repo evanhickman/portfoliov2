@@ -1,5 +1,5 @@
 'use client';
-import PageTitle from '../components/PageTitle';
+import PageTitle from '../components/ContentContainer';
 import BoxContainer from '../components/BoxContainer';
 import { contactBoxes as boxes } from '../box-data';
 

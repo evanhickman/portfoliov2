@@ -9,7 +9,8 @@ type BoxProps = {
   link?: string;
   id: number;
   classNames: string;
-  isActive: boolean;
+  active: number | null;
+  setActive: (id: number) => void;
   onClick: (id: number) => void;
 };
 
@@ -19,7 +20,8 @@ const Box = ({
   link,
   id,
   classNames,
-  isActive,
+  active,
+  setActive,
   onClick,
 }: BoxProps) => {
   return (

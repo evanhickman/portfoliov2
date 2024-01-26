@@ -1,11 +1,14 @@
 'use client';
 import { motion } from 'framer-motion';
-interface PageTitleProps {
+interface ContentContainerProps {
   heading: string;
   subheading?: string;
 }
 
-const PageTitle: React.FC<PageTitleProps> = ({ heading, subheading }) => {
+const ContentContainer: React.FC<ContentContainerProps> = ({
+  heading,
+  subheading,
+}) => {
   return (
     <motion.section
       className='basis-6/12 flex flex-col justify-center pl-20 py-5'
@@ -22,4 +25,4 @@ const PageTitle: React.FC<PageTitleProps> = ({ heading, subheading }) => {
   );
 };
 
-export default PageTitle;
+export default ContentContainer;
