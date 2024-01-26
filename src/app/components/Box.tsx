@@ -3,8 +3,24 @@ import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { BoxItem } from '../box-data';
 
-const Box = ({ title, description, link, id, classNames }: BoxItem) => {
-  const [active, setActive] = useState(false);
+type BoxProps = {
+  title?: string;
+  description?: string;
+  link?: string;
+  id: number;
+  classNames: string;
+  onClick: () => void;
+  isActive: boolean;
+};
+
+const Box = ({
+  title,
+  description,
+  link,
+  id,
+  classNames,
+  isActive,
+}: BoxProps) => {
   const variants = {
     visible: {
       x: '0',
@@ -30,21 +46,11 @@ const Box = ({ title, description, link, id, classNames }: BoxItem) => {
           delay: id * 0.1,
         }}
         exit={{ x: '100%' }}
-        onClick={() => setActive(!active)}
       >
         <div className='pl-40'>
           {title && <h2 className='text-2xl text-black-900'>{title}</h2>}
         </div>
       </motion.div>
-      {active && (
-        <motion.div
-          className='absolute top-0 right-0 w-full bg-neutral-50/40 backdrop-blur-md z-50'
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: '100vh' }}
-        >
-          {description && <p className='text-black-900'>{description}</p>}
-        </motion.div>
-      )}
     </AnimatePresence>
   );
 };

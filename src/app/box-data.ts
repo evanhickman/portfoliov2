@@ -41,7 +41,7 @@ export const workBoxes = [
     description: 'More info coming soon...',
     link: 'http://example.com',
     image: '',
-    classNames: 'bg-cyan-100',
+    classNames: 'bg-yellow-100',
   },
   {
     id: 2,
@@ -49,7 +49,7 @@ export const workBoxes = [
     description: 'More info coming soon...',
     link: 'http://example.com',
     image: '',
-    classNames: 'bg-cyan-200',
+    classNames: 'bg-yellow-200',
   },
   {
     id: 3,
@@ -57,7 +57,7 @@ export const workBoxes = [
     description: 'More info coming soon...',
     link: 'http://example.com',
     image: '',
-    classNames: 'bg-cyan-300',
+    classNames: 'bg-yellow-300',
   },
   {
     id: 4,
@@ -65,7 +65,7 @@ export const workBoxes = [
     description: 'More info coming soon...',
     link: 'http://example.com',
     image: '',
-    classNames: 'bg-cyan-400',
+    classNames: 'bg-yellow-400',
   },
   {
     id: 5,
@@ -73,7 +73,7 @@ export const workBoxes = [
     description: 'More info coming soon...',
     link: 'http://example.com',
     image: '',
-    classNames: 'bg-cyan-500',
+    classNames: 'bg-yellow-500',
   },
   {
     id: 6,
@@ -81,7 +81,7 @@ export const workBoxes = [
     description: 'More info coming soon...',
     link: 'http://example.com',
     image: '',
-    classNames: 'bg-cyan-600',
+    classNames: 'bg-yellow-600',
   },
 ];
 
