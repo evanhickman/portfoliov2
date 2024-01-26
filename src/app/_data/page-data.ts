@@ -86,7 +86,7 @@ export const workContent: PageContent = {
     },
     {
       id: 5,
-      title: 'The Racounteurs',
+      title: 'The Raconteurs',
       description: 'Artist website',
       features:
         'UX Design, WordPress, Vue.js, SVG Animations, JavaScript Snake Game',
