@@ -22,6 +22,18 @@ const Box = ({
   isActive,
   onClick,
 }: BoxProps) => {
+  const variants = {
+    visible: {
+      x: '0',
+      gridRow: 'span 1',
+      transition: { duration: 0.5, delay: id * 0.1 },
+    },
+    active: {
+      x: '0',
+      gridRow: `span 50`,
+      transition: { type: 'spring', duration: 1, delay: 0, layout: true },
+    },
+  };
   return (
     <AnimatePresence>
       <motion.div
