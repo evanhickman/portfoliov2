@@ -1,11 +1,11 @@
 export type BoxItem = {
-  id: number;
-  classNames: string;
-  title?: string;
-  description?: string;
-  link?: string;
-  image?: string;
-};
+  id: number
+  classNames: string
+  title?: string
+  description?: string
+  link?: string
+  image?: string
+}
 
 export const homeBoxes = [
   {
@@ -32,7 +32,7 @@ export const homeBoxes = [
     id: 6,
     classNames: 'box-six',
   },
-];
+]
 
 export const workBoxes = [
   {
@@ -83,7 +83,7 @@ export const workBoxes = [
     image: '',
     classNames: 'bg-yellow-600',
   },
-];
+]
 
 export const contactBoxes = [
   {
@@ -115,4 +115,4 @@ export const contactBoxes = [
     id: 7,
     classNames: 'bg-green-700',
   },
-];
+]

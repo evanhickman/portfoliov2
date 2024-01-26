@@ -1,11 +1,11 @@
-import Box from '@/app/components/box/Box';
-import { BoxItem } from '@/app/components/box/box-data';
+import Box from '@/app/components/box/Box'
+import { BoxItem } from '@/app/components/box/box-data'
 
 interface BoxContainerProps {
-  boxes: BoxItem[];
-  active: number | null;
-  setActive?: (id: number) => void;
-  onClick?: (id: number) => void;
+  boxes: BoxItem[]
+  active: number | null
+  setActive?: (id: number) => void
+  onClick?: (id: number) => void
 }
 
 const BoxContainer = ({
@@ -21,14 +21,13 @@ const BoxContainer = ({
           id={box?.id}
           title={box?.title}
           classNames={box?.classNames}
-          key={box.id}
           active={active}
-          setActive={setActive}
           onClick={onClick}
+          key={box.id}
         />
       ))}
     </section>
-  );
-};
+  )
+}
 
-export default BoxContainer;
+export default BoxContainer

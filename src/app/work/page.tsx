@@ -10,8 +10,6 @@ const Work = () => {
     setActive((prevId) => (prevId === id ? null : id));
   };
 
-  console.log(active);
-
   return (
     <main>
       <CardContainer boxes={boxes} active={active} heading='Work' />

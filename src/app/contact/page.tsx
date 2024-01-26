@@ -5,8 +5,7 @@ import BoxContainer, { contactBoxes as boxes } from '@/app/components/box';
 const Contact = () => {
   return (
     <main>
-      {/* @ts-ignore */}
-      <CardContainer heading='Contact' />
+      <CardContainer boxes={boxes} heading='Contact' active={null} />
       <BoxContainer boxes={boxes} active={null} />
     </main>
   );
