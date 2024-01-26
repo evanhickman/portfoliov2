@@ -8,7 +8,7 @@ type BoxProps = {
   link?: string;
   id: number;
   classNames: string;
-  expanded: boolean;
+  activeBox: null | number;
   onClick: (id: number) => void;
 };
 
@@ -18,7 +18,7 @@ const Box = ({
   link,
   id,
   classNames,
-  expanded,
+  activeBox,
   onClick,
 }: BoxProps) => {
   const variants = {
@@ -28,7 +28,7 @@ const Box = ({
       flexGrow: '1',
       layout: true,
     },
-    expanded: {
+    default: {
       x: '0',
       opacity: 1,
       flexGrow: '1',
@@ -39,7 +39,18 @@ const Box = ({
       },
       layout: true,
     },
-    contracted: {
+    active: {
+      x: '0',
+      y: '0',
+      opacity: 1,
+      transition: { type: 'spring', duration: 0.5, delay: 0.6 },
+      transitionEnd: {
+        height: '100vh',
+        flexGrow: '1',
+      },
+      layout: true,
+    },
+    inactive: {
       x: '100%',
       opacity: 0,
       transition: {
@@ -54,6 +65,8 @@ const Box = ({
       layout: true,
     },
   };
+
+  // const [variant, setVariant] = useState('default');
 
   return (
     <AnimatePresence>

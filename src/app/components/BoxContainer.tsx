@@ -23,7 +23,7 @@ const BoxContainer = ({ boxes }: BoxContainerProps) => {
           classNames={box?.classNames}
           key={box.id}
           onClick={onClick}
-          expanded={activeBox === box.id}
+          activeBox={activeBox}
         />
       ))}
     </section>
