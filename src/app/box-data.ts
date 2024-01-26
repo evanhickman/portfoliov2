@@ -1,4 +1,4 @@
-export type Box = {
+export type BoxItem = {
   id: number;
   classNames: string;
   title?: string;

@@ -1,9 +1,9 @@
 'use client';
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Box } from '../box-data';
+import { BoxItem } from '../box-data';
 
-const Box = ({ title, description, link, id, classNames }: Box) => {
+const Box = ({ title, description, link, id, classNames }: BoxItem) => {
   const [active, setActive] = useState(false);
   const variants = {
     visible: {
