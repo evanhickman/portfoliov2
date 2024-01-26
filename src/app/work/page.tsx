@@ -5,14 +5,13 @@ import { workDataArray } from './data';
 import Box from '../components/Box';
 
 const Work = () => {
-  const [expanded, setExpanded] = useState(0);
   return (
     <main className='min-h-screen w-full flex bg-neutral-900 relative'>
       <motion.section
         className='basis-6/12 flex flex-col justify-center pl-20 py-5'
         animate={{ y: 0 }}
         initial={{ y: '100%' }}
-        transition={{ duration: 0.5, delay: 0.4 }}
+        transition={{ type: 'spring', duration: 0.6, delay: 0.4 }}
         exit={{ x: '100%' }}
       >
         <h1 className='text-8xl text-animation'>Work</h1>
