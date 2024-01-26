@@ -6,8 +6,8 @@ import Box from './Box';
 interface BoxContainerProps {
   boxes: BoxItem[];
   active: number | null;
-  setActive: (id: number) => void;
-  onClick: (id: number) => void;
+  setActive?: (id: number) => void;
+  onClick?: (id: number) => void;
 }
 
 const BoxContainer = ({

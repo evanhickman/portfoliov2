@@ -15,7 +15,7 @@ const Work = () => {
 
   return (
     <main>
-      <ContentContainer heading='Work' />
+      <ContentContainer boxes={boxes} active={active} heading='Work' />
       <BoxContainer
         boxes={boxes}
         active={active}

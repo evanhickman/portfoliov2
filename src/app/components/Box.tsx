@@ -10,8 +10,8 @@ type BoxProps = {
   id: number;
   classNames: string;
   active: number | null;
-  setActive: (id: number) => void;
-  onClick: (id: number) => void;
+  setActive?: (id: number) => void;
+  onClick?: (id: number) => void;
 };
 
 const Box = ({
@@ -36,7 +36,7 @@ const Box = ({
           delay: id * 0.1,
         }}
         exit={{ x: '100%' }}
-        onClick={() => onClick(id)}
+        onClick={() => onClick && onClick(id)}
       >
         <div className='pl-40'>
           {title && <h2 className='text-2xl text-black-900'>{title}</h2>}
