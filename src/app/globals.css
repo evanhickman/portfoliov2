@@ -29,10 +29,8 @@ body {
   background: theme(colors.black.900);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+main {
+  @apply min-h-screen w-full grid grid-cols-2;
 }
 
 /* BEGIN ANIMATIONS */
@@ -234,3 +232,9 @@ body {
 }
 
 /* END ANIMATIONS */
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

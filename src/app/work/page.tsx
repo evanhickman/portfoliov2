@@ -1,33 +1,25 @@
 'use client';
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { workDataArray } from './data';
+import PageTitle from '../components/PageTitle';
+import BoxContainer from '../components/BoxContainer';
 import Box from '../components/Box';
+import { workBoxes } from '../box-data';
 
 const Work = () => {
   return (
-    <main className='min-h-screen w-full flex bg-neutral-900'>
-      <motion.section
-        className='basis-6/12 flex flex-col justify-center pl-20 py-5'
-        animate={{ y: 0 }}
-        initial={{ y: '100%' }}
-        transition={{ type: 'spring', duration: 0.6, delay: 0.4 }}
-        exit={{ x: '100%' }}
-      >
-        <h1 className='text-8xl text-animation'>Work</h1>
-      </motion.section>
-      <section className='basis-6/12 grid grid-cols-1 grid-rows-6 gap-1.5 relative'>
-        {workDataArray.map((item, index) => (
+    <main>
+      <PageTitle heading='Work' />
+      <BoxContainer>
+        {workBoxes.map((box) => (
           <Box
-            bgColor={`${item.bgColor}`}
-            key={item.id}
-            title={item.title}
-            description={item.description}
-            link={item.link}
-            index={index}
+            classNames={box.classNames}
+            key={box.id}
+            title={box.title}
+            description={box.description}
+            link={box.link}
+            id={box.id}
           />
         ))}
-      </section>
+      </BoxContainer>
     </main>
   );
 };

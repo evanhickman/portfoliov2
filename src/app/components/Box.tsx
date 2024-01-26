@@ -1,22 +1,15 @@
 'use client';
-import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { Box } from '../box-data';
 
-type BoxProps = {
-  bgColor: string;
-  title?: string;
-  description?: string;
-  link?: string;
-  index: number;
-};
-
-const Box = ({ bgColor, title, description, link, index }: BoxProps) => {
+const Box = ({ title, description, link, id, classNames }: Box) => {
   const [active, setActive] = useState(false);
   const variants = {
     visible: {
       x: '0',
       gridRow: 'span 1',
-      transition: { duration: 0.5, delay: index * 0.1 },
+      transition: { duration: 0.5, delay: id * 0.1 },
     },
     active: {
       x: '0',
@@ -28,13 +21,13 @@ const Box = ({ bgColor, title, description, link, index }: BoxProps) => {
   return (
     <AnimatePresence>
       <motion.div
-        className={`${bgColor} flex flex-col justify-center row-span-1 cursor-pointer z-10`}
+        className={`${classNames} flex flex-col justify-center row-span-1 cursor-pointer z-10`}
         initial={{ x: '100%' }}
         animate={{ x: 0 }}
         transition={{
           type: 'spring',
           duration: 0.6,
-          delay: index * 0.1,
+          delay: id * 0.1,
         }}
         exit={{ x: '100%' }}
         onClick={() => setActive(!active)}

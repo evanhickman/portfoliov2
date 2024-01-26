@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${urban.className} relative`}>
+      <body className={`${urban.className} bg-neutral-900`}>
         <Header />
         {children}
       </body>
