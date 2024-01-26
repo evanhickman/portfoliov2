@@ -15,7 +15,7 @@ const Box = ({ title, id, classNames, active, onClick }: BoxProps) => {
       <motion.div
         className={`${
           active === id ? 'bg-black-900' : classNames
-        } flex flex-col justify-center row-span-1 cursor-pointer z-10`}
+        } flex flex-col justify-center row-span-1 cursor-pointer z-50`}
         initial={{ x: '100%' }}
         animate={{ x: 0 }}
         transition={{
@@ -26,7 +26,7 @@ const Box = ({ title, id, classNames, active, onClick }: BoxProps) => {
         exit={{ x: '100%' }}
         onClick={() => onClick && onClick(id)}
       >
-        <div className="pl-40">
+        <div className="px-9 lg:pl-40">
           {title && (
             <h2
               className={`${

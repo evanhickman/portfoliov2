@@ -6,7 +6,12 @@ import { contactContent as content } from '@/app/_data'
 const Contact = () => {
   return (
     <main>
-      <CardContainer content={content} heading="Contact" active={null} />
+      <CardContainer
+        content={content}
+        heading="Contact"
+        subheading="Coming soon"
+        active={null}
+      />
       <BoxContainer boxes={content.boxes} active={null} />
     </main>
   )

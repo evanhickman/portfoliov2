@@ -7,7 +7,8 @@ export interface PageContent {
 export interface BoxContent {
   id: number
   title?: string
-  description?: string
+  subtitle?: string
+  desc?: string
   features?: string
   link?: string
   image?: string
@@ -47,61 +48,69 @@ export const homeContent: PageContent = {
 
 export const workContent: PageContent = {
   heading: 'Work',
+  subheading: 'Selected projects',
   boxes: [
     {
       id: 1,
       title: 'Jane Marketplace',
-      description: 'Modern e-commerce dashboard',
-      features: 'React, TypeScript, Styled Components, Storybook, Jest',
+      subtitle: 'E-commerce dashboard',
+      features:
+        'React, TypeScript, Styled Components, GraphQL, Angular, Storybook, Jest',
+      desc: 'This section is under construction. Please check back soon for more info.',
       image: '',
-      classNames: 'bg-yellow-100',
+      classNames: 'bg-indigo-100',
     },
     {
       id: 2,
       title: 'Marigold Marketing',
-      description: 'Lead generation marketing',
+      subtitle: 'Lead generation marketing',
       features:
-        'React, WordPress, Gatsby, Next.js, CSS Animations, Personalized Content, A/B Testing',
+        'React, WordPress, Gatsby, Next.js, GraphQL,  CSS Animations, Personalized Content, A/B Testing',
       link: 'https://meetmarigold.com/',
+      desc: 'This section is under construction. Please check back soon for more info.',
       image: '',
-      classNames: 'bg-yellow-200',
+      classNames: 'bg-indigo-200',
     },
     {
       id: 3,
       title: 'Third Man Records',
-      description: 'Independent record label',
+      subtitle: 'Independent record label',
       features: 'UX Design, SilverStripe CMS, HTML & CSS',
       link: 'https://thirdmanrecords.com/',
+      desc: 'This section is under construction. Please check back soon for more info.',
       image: '',
-      classNames: 'bg-yellow-300',
+      classNames: 'bg-indigo-300',
     },
     {
       id: 4,
       title: 'Jack White',
-      description: 'Artist website',
-      features: 'UX Design, WordPress, HTML & CSS, jQuery',
+      subtitle: 'Artist website',
+      features: 'Responsive design, WordPress, HTML & CSS, jQuery',
       link: 'https://jackwhiteiii.com/',
+      desc: 'This section is under construction. Please check back soon for more info.',
       image: '',
-      classNames: 'bg-yellow-400',
+      classNames: 'bg-indigo-400',
     },
     {
       id: 5,
       title: 'The Raconteurs',
-      description: 'Artist website',
+      subtitle: 'Artist website',
       features:
         'UX Design, WordPress, Vue.js, SVG Animations, JavaScript Snake Game',
       link: 'https://theraconteurs.com/',
+      desc: 'Desgin and develop frontend using Vue.js, animated SVGs, and adding touch support to an open source JavaScript Snake game.',
       image: '',
-      classNames: 'bg-yellow-500',
+      classNames: 'bg-indigo-500',
     },
     {
       id: 6,
       title: 'Third Man Pressing',
+      subtitle: 'Independent record pressing plant',
       features: 'UX Design, Laravel, Vue.js, Scroll Animations',
-      description: 'Independent record pressing plant',
       link: 'https://thirdmanpressing.com/',
+      desc: 'Full frontend redesign using Vue.js and animation on scroll.',
       image: '',
-      classNames: 'bg-yellow-600',
+      classNames: 'bg-indigo-600',
     },
   ],
 }
@@ -124,7 +133,6 @@ export const contactContent: PageContent = {
     {
       id: 4,
       classNames: 'bg-green-400',
-      title: 'Coming soon...',
     },
     {
       id: 5,
@@ -133,10 +141,6 @@ export const contactContent: PageContent = {
     {
       id: 6,
       classNames: 'bg-green-600',
-    },
-    {
-      id: 7,
-      classNames: 'bg-green-700',
     },
   ],
 }

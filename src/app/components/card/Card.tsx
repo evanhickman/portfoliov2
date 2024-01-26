@@ -1,15 +1,21 @@
+import Link from 'next/link'
+
 type CardProps = {
-  heading?: string
-  subheading?: string
-  desc?: string
-  link?: string
-  features?: string
-  image?: string
+  heading: string
+  subheading: string
+  contentTitle: string
+  contentSubtitle: string
+  desc: string
+  link: string
+  features: string
+  image: string
 }
 
-const Card: React.FC<CardProps> = ({
+const Card: React.FC<Partial<CardProps>> = ({
   heading,
   subheading,
+  contentTitle,
+  contentSubtitle,
   desc,
   link,
   features,
@@ -17,12 +23,26 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <>
-      <h1 className="text-6xl">{heading}</h1>
+      {heading && <h1 className="text-5xl">{heading}</h1>}
       {subheading && (
-        <h2 className="text-4xl mt-8 color-shift-text">{subheading}</h2>
+        <h2 className="text-4xl mt-3 color-shift-text">{subheading}</h2>
       )}
-      {desc && <p className="mt-6 text-3xl">{desc}</p>}
-      {features && <p className="mt-6">{features}</p>}
+      {contentTitle && <h1 className="text-5xl">{contentTitle}</h1>}
+      {contentSubtitle && (
+        <h2 className="text-3xl mt-3 color">{contentSubtitle}</h2>
+      )}
+      {features && <p className="mt-3 italic">{features}</p>}
+      {link && (
+        <Link
+          href={link}
+          className="mt-8 color-shift-text hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {link}
+        </Link>
+      )}
+      {desc && <p className={`${link ? 'mt-3' : 'mt-6'}`}>{desc}</p>}
     </>
   )
 }

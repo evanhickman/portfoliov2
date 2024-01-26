@@ -14,12 +14,7 @@ const Work = () => {
   return (
     <main>
       <CardContainer content={content} active={active} heading="Work" />
-      <BoxContainer
-        boxes={content.boxes}
-        active={active}
-        setActive={setActive}
-        onClick={onClick}
-      />
+      <BoxContainer boxes={content.boxes} active={active} onClick={onClick} />
     </main>
   )
 }
