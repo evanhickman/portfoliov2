@@ -1,5 +1,5 @@
 'use client';
-import PageTitle from '../components/ContentContainer';
+import ContentContainer from '../components/ContentContainer';
 import BoxContainer from '../components/BoxContainer';
 import { workBoxes as boxes } from '../box-data';
 import { useState } from 'react';
@@ -15,7 +15,7 @@ const Work = () => {
 
   return (
     <main>
-      <PageTitle heading='Work' />
+      <ContentContainer heading='Work' />
       <BoxContainer
         boxes={boxes}
         active={active}
