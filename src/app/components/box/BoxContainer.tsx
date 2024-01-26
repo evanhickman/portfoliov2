@@ -1,8 +1,8 @@
 import Box from '@/app/components/box/Box'
-import { BoxItem } from '@/app/components/box/box-data'
+import { PageContent } from '@/app/_data/page-data'
 
 interface BoxContainerProps {
-  boxes: BoxItem[]
+  boxes: PageContent['boxes']
   active: number | null
   setActive?: (id: number) => void
   onClick?: (id: number) => void

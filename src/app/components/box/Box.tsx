@@ -13,7 +13,9 @@ const Box = ({ title, id, classNames, active, onClick }: BoxProps) => {
   return (
     <AnimatePresence>
       <motion.div
-        className={`${classNames} flex flex-col justify-center row-span-1 cursor-pointer z-10`}
+        className={`${
+          active === id ? 'bg-black-900' : classNames
+        } flex flex-col justify-center row-span-1 cursor-pointer z-10`}
         initial={{ x: '100%' }}
         animate={{ x: 0 }}
         transition={{
@@ -25,7 +27,15 @@ const Box = ({ title, id, classNames, active, onClick }: BoxProps) => {
         onClick={() => onClick && onClick(id)}
       >
         <div className="pl-40">
-          {title && <h2 className="text-2xl text-black-900">{title}</h2>}
+          {title && (
+            <h2
+              className={`${
+                active === id ? 'text-black-50' : 'text-black-900'
+              } text-2xl`}
+            >
+              {title}
+            </h2>
+          )}
         </div>
       </motion.div>
     </AnimatePresence>

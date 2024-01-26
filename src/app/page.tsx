@@ -1,17 +1,18 @@
 'use client'
 import CardContainer from '@/app/components/card'
-import BoxContainer, { homeBoxes as boxes } from '@/app/components/box'
+import BoxContainer from '@/app/components/box'
+import { homeContent as content } from '@/app/_data'
 
 const Home = () => {
   return (
     <main>
       <CardContainer
-        boxes={boxes}
+        content={content}
         active={null}
         heading="Evan Hickman"
         subheading="UX Developer & Designer"
       />
-      <BoxContainer boxes={boxes} active={null} />
+      <BoxContainer boxes={content.boxes} active={null} />
     </main>
   )
 }

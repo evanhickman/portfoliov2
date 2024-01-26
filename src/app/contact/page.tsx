@@ -1,14 +1,15 @@
-'use client';
-import CardContainer from '@/app/components/card/CardContainer';
-import BoxContainer, { contactBoxes as boxes } from '@/app/components/box';
+'use client'
+import CardContainer from '@/app/components/card/CardContainer'
+import BoxContainer from '@/app/components/box'
+import { contactContent as content } from '@/app/_data'
 
 const Contact = () => {
   return (
     <main>
-      <CardContainer boxes={boxes} heading='Contact' active={null} />
-      <BoxContainer boxes={boxes} active={null} />
+      <CardContainer content={content} heading="Contact" active={null} />
+      <BoxContainer boxes={content.boxes} active={null} />
     </main>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact
