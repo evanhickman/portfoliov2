@@ -10,7 +10,7 @@ interface BoxContainerProps {
 const BoxContainer = ({ boxes, active, onClick }: BoxContainerProps) => {
   return (
     <section
-      className={`row-span-1 lg:row-span-0 lg:max-h-screen grid grid-cols-1 grid-rows-${boxes.length} gap-1.5`}
+      className={`row-span-1 lg:row-span-0 lg:h-screen grid grid-cols-1 grid-rows-${boxes.length} gap-1.5`}
     >
       {boxes.map((box) => (
         <Box

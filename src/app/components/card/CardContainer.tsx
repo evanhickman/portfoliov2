@@ -49,9 +49,6 @@ const CardContainer: React.FC<CardContainerProps> = ({
               link={activeBox?.link}
               desc={activeBox?.desc}
             />
-            <p className="mt-8 text-3xl">
-              This section is under construction. Check back soon!
-            </p>
           </motion.div>
         )}
       </AnimatePresence>
