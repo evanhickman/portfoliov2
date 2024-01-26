@@ -45,7 +45,7 @@ export const workBoxes = [
   },
   {
     id: 2,
-    title: 'Marigold Relationship Marketing',
+    title: 'Marigold Marketing',
     description: 'More info coming soon...',
     link: 'http://example.com',
     image: '',

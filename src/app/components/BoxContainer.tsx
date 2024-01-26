@@ -8,10 +8,10 @@ interface BoxContainerProps {
 }
 
 const BoxContainer = ({ boxes }: BoxContainerProps) => {
-  const [active, setActive] = useState<number | null>(null);
+  const [activeBox, setActiveBox] = useState<number | null>(null);
 
   const onClick = (id: number) => {
-    setActive((prevId) => (prevId === id ? null : id));
+    setActiveBox((prevId) => (prevId === id ? null : id));
   };
 
   return (
@@ -23,7 +23,7 @@ const BoxContainer = ({ boxes }: BoxContainerProps) => {
           classNames={box?.classNames}
           key={box.id}
           onClick={onClick}
-          isActive={box.id === active}
+          activeBox={activeBox}
         />
       ))}
     </section>
