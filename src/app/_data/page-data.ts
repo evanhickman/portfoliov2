@@ -48,6 +48,7 @@ export const homeContent: PageContent = {
 
 export const workContent: PageContent = {
   heading: 'Work',
+  subheading: 'Selected projects',
   boxes: [
     {
       id: 1,
@@ -55,9 +56,9 @@ export const workContent: PageContent = {
       subtitle: 'E-commerce dashboard',
       features:
         'React, TypeScript, Styled Components, GraphQL, Angular, Storybook, Jest',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+      desc: 'This section is under construction. Please check back soon for more info.',
       image: '',
-      classNames: 'bg-yellow-100',
+      classNames: 'bg-indigo-100',
     },
     {
       id: 2,
@@ -66,9 +67,9 @@ export const workContent: PageContent = {
       features:
         'React, WordPress, Gatsby, Next.js, GraphQL,  CSS Animations, Personalized Content, A/B Testing',
       link: 'https://meetmarigold.com/',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+      desc: 'This section is under construction. Please check back soon for more info.',
       image: '',
-      classNames: 'bg-yellow-200',
+      classNames: 'bg-indigo-200',
     },
     {
       id: 3,
@@ -76,9 +77,9 @@ export const workContent: PageContent = {
       subtitle: 'Independent record label',
       features: 'UX Design, SilverStripe CMS, HTML & CSS',
       link: 'https://thirdmanrecords.com/',
-      desc: 'Full frontend redesign.',
+      desc: 'This section is under construction. Please check back soon for more info.',
       image: '',
-      classNames: 'bg-yellow-300',
+      classNames: 'bg-indigo-300',
     },
     {
       id: 4,
@@ -86,9 +87,9 @@ export const workContent: PageContent = {
       subtitle: 'Artist website',
       features: 'Responsive design, WordPress, HTML & CSS, jQuery',
       link: 'https://jackwhiteiii.com/',
-      desc: 'Full frontend redesign.',
+      desc: 'This section is under construction. Please check back soon for more info.',
       image: '',
-      classNames: 'bg-yellow-400',
+      classNames: 'bg-indigo-400',
     },
     {
       id: 5,
@@ -99,7 +100,7 @@ export const workContent: PageContent = {
       link: 'https://theraconteurs.com/',
       desc: 'Desgin and develop frontend using Vue.js, animated SVGs, and adding touch support to an open source JavaScript Snake game.',
       image: '',
-      classNames: 'bg-yellow-500',
+      classNames: 'bg-indigo-500',
     },
     {
       id: 6,
@@ -109,7 +110,7 @@ export const workContent: PageContent = {
       link: 'https://thirdmanpressing.com/',
       desc: 'Full frontend redesign using Vue.js and animation on scroll.',
       image: '',
-      classNames: 'bg-yellow-600',
+      classNames: 'bg-indigo-600',
     },
   ],
 }
@@ -140,10 +141,6 @@ export const contactContent: PageContent = {
     {
       id: 6,
       classNames: 'bg-green-600',
-    },
-    {
-      id: 7,
-      classNames: 'bg-green-700',
     },
   ],
 }

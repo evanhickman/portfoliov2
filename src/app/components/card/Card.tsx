@@ -35,14 +35,14 @@ const Card: React.FC<Partial<CardProps>> = ({
       {link && (
         <Link
           href={link}
-          className="mt-8 hover:underline"
+          className="mt-8 color-shift-text hover:underline"
           target="_blank"
           rel="noopener noreferrer"
         >
           {link}
         </Link>
       )}
-      {desc && <p className="mt-3">{desc}</p>}
+      {desc && <p className={`${link ? 'mt-3' : 'mt-6'}`}>{desc}</p>}
     </>
   )
 }
