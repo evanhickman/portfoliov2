@@ -1,8 +1,7 @@
 'use client';
-import ContentContainer from '@/app/components/ContentContainer';
-import BoxContainer from '@/app/components/box';
-import { workBoxes as boxes } from '../components/box/box-data';
 import { useState } from 'react';
+import CardContainer from '@/app/components/card';
+import BoxContainer, { workBoxes as boxes } from '../components/box';
 
 const Work = () => {
   const [active, setActive] = useState<number | null>(null);
@@ -15,7 +14,7 @@ const Work = () => {
 
   return (
     <main>
-      <ContentContainer boxes={boxes} active={active} heading='Work' />
+      <CardContainer boxes={boxes} active={active} heading='Work' />
       <BoxContainer
         boxes={boxes}
         active={active}

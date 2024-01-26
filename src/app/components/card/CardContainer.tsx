@@ -1,15 +1,15 @@
 'use client';
 import { AnimatePresence, motion } from 'framer-motion';
-import { BoxItem } from './box/box-data';
+import { BoxItem } from '../box/box-data';
 
-interface ContentContainerProps {
+interface CardContainerProps {
   heading: string;
   subheading?: string;
   boxes: BoxItem[];
   active: number | null;
 }
 
-const ContentContainer: React.FC<ContentContainerProps> = ({
+const CardContainer: React.FC<CardContainerProps> = ({
   heading,
   subheading,
   boxes,
@@ -54,4 +54,4 @@ const ContentContainer: React.FC<ContentContainerProps> = ({
   );
 };
 
-export default ContentContainer;
+export default CardContainer;
