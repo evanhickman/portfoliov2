@@ -6,7 +6,7 @@ import Box from '../components/Box';
 
 const Work = () => {
   return (
-    <main className='min-h-screen w-full flex bg-neutral-900 relative'>
+    <main className='min-h-screen w-full flex bg-neutral-900'>
       <motion.section
         className='basis-6/12 flex flex-col justify-center pl-20 py-5'
         animate={{ y: 0 }}
@@ -16,7 +16,7 @@ const Work = () => {
       >
         <h1 className='text-8xl text-animation'>Work</h1>
       </motion.section>
-      <section className='basis-6/12 grid grid-cols-1 grid-rows-6 gap-1.5'>
+      <section className='basis-6/12 grid grid-cols-1 grid-rows-6 gap-1.5 relative'>
         {workDataArray.map((item, index) => (
           <Box
             bgColor={`${item.bgColor}`}
