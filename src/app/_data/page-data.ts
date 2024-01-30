@@ -17,7 +17,7 @@ export interface BoxContent {
 
 export const homeContent: PageContent = {
   heading: 'Evan Hickman',
-  subheading: 'UX Developer & Designer',
+  subheading: 'UI/UX Developer',
   boxes: [
     {
       id: 1,
@@ -56,7 +56,7 @@ export const workContent: PageContent = {
       subtitle: 'E-commerce dashboard',
       features:
         'React, TypeScript, Styled Components, GraphQL, Angular, Storybook, Jest',
-      desc: 'This section is under construction. Please check back soon.',
+      desc: 'As lead frontend developer on the Seller Tools team, I worked with backend engineers, designers, and product managers to optimize UX and regularly release new features. We reduced friction in our onboarding flow by integrating with Plaid to support Instant Account Verification. We improved product filter and search performance by 800% by moving to client-side logic. Finally, we built an entirely new product creation form, which, upon its release, reduced the time from product creation to listing from days to minutes.',
       image: '',
       classNames: 'bg-indigo-100',
     },
@@ -67,7 +67,7 @@ export const workContent: PageContent = {
       features:
         'React, WordPress, Gatsby, Next.js, GraphQL,  CSS Animations, Personalized Content, A/B Testing',
       link: 'https://meetmarigold.com/',
-      desc: 'This section is under construction. Please check back soon.',
+      desc: 'I worked with a small team of talented frontend developers to build, maintain, and optimize a suite of high traffic, lead-generation marketing sites. We used React, Gatsby, headless WordPress, and Next.js to build performant, SEO-friendly sites. Using eye-catching CSS animations, personalized content, and rigorous A/B testing, our mission was to continually optimize conversion across all brands.',
       image: '',
       classNames: 'bg-indigo-200',
     },
@@ -77,8 +77,8 @@ export const workContent: PageContent = {
       subtitle: 'Independent record label',
       features: 'UX Design, SilverStripe CMS, HTML & CSS',
       link: 'https://thirdmanrecords.com/',
-      desc: 'This section is under construction. Please check back soon.',
-      image: '',
+      desc: 'Led a holistic site redesign and developed a modular frontend using Vue.js on top of SilverStripe CMS. For this project, I developed a lightweight CSS framework to ensure a consistent and responsive layout across all company marketing sites.',
+      image: '/tmr-home.jpg',
       classNames: 'bg-indigo-300',
     },
     {
@@ -87,8 +87,8 @@ export const workContent: PageContent = {
       subtitle: 'Artist website',
       features: 'Responsive design, WordPress, HTML & CSS, jQuery',
       link: 'https://jackwhiteiii.com/',
-      desc: 'This section is under construction. Please check back soon.',
-      image: '',
+      desc: 'Custom WordPress theme development with responsive layout and jQuery.',
+      image: '/jw-home.jpg',
       classNames: 'bg-indigo-400',
     },
     {
@@ -98,8 +98,8 @@ export const workContent: PageContent = {
       features:
         'UX Design, WordPress, Vue.js, SVG Animations, JavaScript Snake Game',
       link: 'https://theraconteurs.com/',
-      desc: 'Desgin and develop frontend using Vue.js, animated SVGs, and adding touch support to an open source JavaScript Snake game.',
-      image: '',
+      desc: 'Desgin and develop frontend using Vue.js, animated SVGs, and a JavaScript Snake game.',
+      image: '/racs-home.jpg',
       classNames: 'bg-indigo-500',
     },
     {
@@ -108,8 +108,8 @@ export const workContent: PageContent = {
       subtitle: 'Independent record pressing plant',
       features: 'UX Design, Laravel, Vue.js, Scroll Animations',
       link: 'https://thirdmanpressing.com/',
-      desc: 'Full frontend redesign using Vue.js and animation on scroll.',
-      image: '',
+      desc: 'Full site redesign and development using Laravel and Vue.js.',
+      image: '/tmp-home.jpg',
       classNames: 'bg-indigo-600',
     },
   ],

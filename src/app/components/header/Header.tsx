@@ -21,7 +21,7 @@ const Header = () => {
   // bg-neutral-900/20 backdrop-blur-md
 
   return (
-    <header className="fixed w-screen top-0 h-16 px-9 lg:px-24 flex flex-col justify-center z-30 bg-transparent backdrop-blur-lg">
+    <header className="fixed w-screen top-0 h-16 px-12 flex flex-col justify-center z-30 bg-transparent backdrop-blur-lg">
       <nav>
         <ul className="flex justify-between lg:justify-start">
           {navLinks.map((link) => (

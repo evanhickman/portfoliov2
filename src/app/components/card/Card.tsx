@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 type CardProps = {
   heading: string
@@ -31,18 +32,27 @@ const Card: React.FC<Partial<CardProps>> = ({
       {contentSubtitle && (
         <h2 className="text-3xl mt-3 color">{contentSubtitle}</h2>
       )}
-      {features && <p className="mt-3 italic">{features}</p>}
       {link && (
         <Link
           href={link}
-          className="mt-8 color-shift-text hover:underline"
+          className="mt-3 border-solid border-cyan-100 color-shift-text hover:underline"
           target="_blank"
           rel="noopener noreferrer"
         >
-          {link}
+          View Site
         </Link>
       )}
-      {desc && <p className={`${link ? 'mt-3' : 'mt-6'}`}>{desc}</p>}
+      {image && (
+        <Image
+          src={image}
+          alt="Screenshot of site"
+          className="mt-6 rounded-md shadow-md"
+          width={1500}
+          height={780}
+        />
+      )}
+      {features && <p className="mt-6 italic">{features}</p>}
+      {desc && <p className="mt-3">{desc}</p>}
     </>
   )
 }
