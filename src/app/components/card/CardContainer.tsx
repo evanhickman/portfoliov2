@@ -18,7 +18,7 @@ const CardContainer: React.FC<CardContainerProps> = ({
 }) => {
   const activeBox = content?.boxes?.filter((box) => box.id === active)[0]
   return (
-    <div className="row-span-2 lg:row-span-0 lg:max-h-screen flex flex-col justify-center px-12 py-20 lg:py-0 overflow-y-scroll">
+    <div className="row-span-2 lg:row-span-0 lg:max-h-screen flex flex-col justify-center px-12 pt-24 pb-12 overflow-y-scroll">
       <AnimatePresence mode="wait">
         {active === null ? (
           <motion.div
@@ -34,7 +34,7 @@ const CardContainer: React.FC<CardContainerProps> = ({
           </motion.div>
         ) : (
           <motion.div
-            className="h-full pt-28 flex flex-col overflow-scroll"
+            className="h-full flex flex-col overflow-scroll"
             initial={{ y: '100%' }}
             animate={{ y: 0 }}
             exit={{ opacity: '0' }}
