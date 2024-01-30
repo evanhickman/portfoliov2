@@ -18,7 +18,11 @@ const CardContainer: React.FC<CardContainerProps> = ({
 }) => {
   const activeBox = content?.boxes?.filter((box) => box.id === active)[0]
   return (
-    <div className="row-span-2 lg:row-span-0 lg:max-h-screen flex flex-col justify-center px-12 pt-24 pb-12 overflow-y-scroll">
+    <div
+      className={`row-span-2 lg:row-span-0 lg:max-h-screen flex flex-col justify-center px-12 pt-24 pb-12 ${
+        active !== null && 'overflow-scroll'
+      }`}
+    >
       <AnimatePresence mode="wait">
         {active === null ? (
           <motion.div
