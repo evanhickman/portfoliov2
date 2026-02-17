@@ -1,7 +1,7 @@
-"use client";
-import CardContainer from "@/app/components/card";
-import BoxContainer from "@/app/components/box";
-import { homeContent as content } from "@/app/_data";
+'use client'
+import CardContainer from '@/app/components/card'
+import BoxContainer from '@/app/components/box'
+import { homeContent as content } from '@/app/_data'
 
 const Home = () => {
   return (
@@ -14,7 +14,7 @@ const Home = () => {
       />
       <BoxContainer boxes={content.boxes} active={null} />
     </main>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
