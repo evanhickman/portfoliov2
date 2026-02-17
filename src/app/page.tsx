@@ -1,5 +1,5 @@
 'use client'
-import CardContainer from '@/app/components/card'
+import CardContainer from '@/app/components/card/CardContainer'
 import BoxContainer from '@/app/components/box'
 import { homeContent as content } from '@/app/_data'
 
