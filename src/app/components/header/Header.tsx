@@ -1,6 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
-import logo from '../../../public/logo.png'
 
 const Header = () => {
   const navLinks = [
@@ -17,8 +15,6 @@ const Header = () => {
       link: '/contact',
     },
   ]
-
-  // bg-neutral-900/20 backdrop-blur-md
 
   return (
     <header className="fixed w-screen top-0 h-16 px-12 flex flex-col justify-center z-30 bg-transparent backdrop-blur-lg">

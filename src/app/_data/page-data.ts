@@ -17,7 +17,7 @@ export interface BoxContent {
 
 export const homeContent: PageContent = {
   heading: 'Evan Hickman',
-  subheading: 'UI/UX Developer',
+  subheading: 'Frontend Engineer',
   boxes: [
     {
       id: 1,
@@ -50,6 +50,17 @@ export const workContent: PageContent = {
   heading: 'Work',
   subheading: 'Selected projects',
   boxes: [
+    // {
+    //   id: 0,
+    //   title: "Tractor Supply Co.",
+    //   subtitle: "E-commerce website",
+    //   features:
+    //     "React, TypeScript, Micro-Frontend Architecture, Material UI, Storybook, Jest, React Testing Library, Cypress",
+    //   desc: "As Frontend Tech Lead on the Homepage and Gobal Navigation teams...",
+    //   link: "https://www.tractorsupply.com/",
+    //   image: "/tsc-home.jpg",
+    //   classNames: "bg-indigo-50",
+    // },
     {
       id: 1,
       title: 'Jane Marketplace',
@@ -57,7 +68,8 @@ export const workContent: PageContent = {
       features:
         'React, TypeScript, Styled Components, GraphQL, Angular, Storybook, Jest',
       desc: 'As lead frontend developer on the Seller Tools team, I worked with backend engineers, designers, and product managers to optimize UX and regularly release new features. We reduced friction in our onboarding flow by integrating with Plaid to support Instant Account Verification. We improved product filter and search performance by 800% by moving to client-side logic. Finally, we built an entirely new product creation form, which, upon its release, reduced the time from product creation to listing from days to minutes.',
-      image: '',
+      link: 'https://www.jane.com',
+      image: '/jane-home.jpg',
       classNames: 'bg-indigo-100',
     },
     {

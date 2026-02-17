@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 
-type CardProps = {
+interface CardProps {
   heading: string
   subheading: string
   contentTitle: string
@@ -12,7 +12,7 @@ type CardProps = {
   image: string
 }
 
-const Card: React.FC<Partial<CardProps>> = ({
+export default function Card({
   heading,
   subheading,
   contentTitle,
@@ -21,7 +21,7 @@ const Card: React.FC<Partial<CardProps>> = ({
   link,
   features,
   image,
-}) => {
+}: Partial<CardProps>) {
   return (
     <>
       {heading && <h1 className="text-5xl">{heading}</h1>}
@@ -56,5 +56,3 @@ const Card: React.FC<Partial<CardProps>> = ({
     </>
   )
 }
-
-export default Card
