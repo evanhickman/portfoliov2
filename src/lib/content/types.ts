@@ -10,6 +10,8 @@ interface BoxContent {
 }
 
 export interface PageContent {
+  url: string
+  navTitle: string
   heading: string
   subheading?: string
   boxes: BoxContent[]

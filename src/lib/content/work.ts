@@ -1,6 +1,8 @@
 import type { PageContent } from './types'
 
 const workContent: PageContent = {
+  url: '/work',
+  navTitle: 'Work',
   heading: 'Work',
   subheading: 'Selected projects',
   boxes: [

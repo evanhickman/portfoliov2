@@ -9,8 +9,8 @@ const Home = () => {
       <CardContainer
         content={content}
         active={null}
-        heading="Evan Hickman"
-        subheading="Frontend Engineer"
+        heading={content.heading}
+        subheading={content.subheading}
       />
       <BoxContainer boxes={content.boxes} active={null} />
     </main>

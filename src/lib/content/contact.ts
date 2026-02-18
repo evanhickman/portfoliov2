@@ -1,6 +1,8 @@
 import type { PageContent } from './types'
 
 const contactContent: PageContent = {
+  url: '/contact',
+  navTitle: 'Contact',
   heading: 'Contact',
   boxes: [
     {
