@@ -1,4 +1,4 @@
-interface BoxContent {
+export interface BoxContent {
 	id: number;
 	title?: string;
 	subtitle?: string;

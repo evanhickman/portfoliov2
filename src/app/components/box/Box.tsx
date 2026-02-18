@@ -1,9 +1,10 @@
 'use client';
 import { AnimatePresence, motion } from 'framer-motion';
+import type { BoxContent } from '@/lib/content/types';
 
 type BoxProps = {
-	id: number;
-	title?: string;
+	id: BoxContent['id'];
+	title?: BoxContent['title'];
 	classNames: string;
 	active: number | null;
 	onClick?: (id: number) => void;
