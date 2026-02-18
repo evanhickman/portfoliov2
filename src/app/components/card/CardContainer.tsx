@@ -1,7 +1,7 @@
 'use client'
 import { AnimatePresence, motion } from 'framer-motion'
 import Card from '@/app/components/card/Card'
-import { PageContent } from '@/app/_data'
+import type { PageContent } from '@/app/lib/pageData'
 
 type CardContainerProps = {
   heading: string

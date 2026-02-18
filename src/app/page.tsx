@@ -1,7 +1,7 @@
 'use client'
+import BoxContainer from '@/app/components/box/BoxContainer'
 import CardContainer from '@/app/components/card/CardContainer'
-import BoxContainer from '@/app/components/box'
-import { homeContent as content } from '@/app/_data'
+import { homeContent as content } from '@/app/lib/pageData'
 
 const Home = () => {
   return (
