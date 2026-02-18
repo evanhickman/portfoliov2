@@ -6,7 +6,7 @@ import content from '@/lib/content/contact';
 export const metadata: Metadata = {
 	title: 'Contact',
 	description:
-		'Evan Hickman is open to new opportunities and collaborations. Feel free to reach out through the contact information provided.',
+		'Ways to get in touch with me, including email and social media links.',
 	openGraph: {
 		type: 'website',
 		locale: 'en_US',
@@ -20,8 +20,8 @@ const Contact = () => {
 		<>
 			<CardContainer
 				content={content}
-				heading="Contact"
-				subheading="Coming soon"
+				heading={content.heading}
+				subheading={content.subheading}
 				active={null}
 			/>
 			<BoxContainer boxes={content.boxes} active={null} />

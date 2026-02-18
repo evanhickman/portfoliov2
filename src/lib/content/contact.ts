@@ -4,6 +4,7 @@ const contactContent: PageContent = {
 	url: '/contact',
 	navTitle: 'Contact',
 	heading: 'Contact',
+	subheading: 'Coming soon',
 	boxes: [
 		{
 			id: 1,

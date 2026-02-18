@@ -14,7 +14,7 @@ const BoxContainer = ({ boxes, active, onClick }: BoxContainerProps) => {
 		>
 			{boxes.map((box) => (
 				<Box
-					id={box?.id}
+					id={box.id}
 					title={box?.title}
 					classNames={box?.classNames}
 					active={active}

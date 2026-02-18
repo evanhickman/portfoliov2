@@ -36,7 +36,7 @@ const workContent: PageContent = {
 				'React, WordPress, Gatsby, Next.js, GraphQL,  CSS Animations, Personalized Content, A/B Testing',
 			link: 'https://meetmarigold.com/',
 			desc: 'I worked with a small team of talented frontend developers to build, maintain, and optimize a suite of high traffic, lead-generation marketing sites. We used React, Gatsby, headless WordPress, and Next.js to build performant, SEO-friendly sites. Using eye-catching CSS animations, personalized content, and rigorous A/B testing, our mission was to continually optimize conversion across all brands.',
-			image: '',
+			image: '/marigold-home.jpg',
 			classNames: 'bg-indigo-200',
 		},
 		{

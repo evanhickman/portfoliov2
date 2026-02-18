@@ -5,7 +5,7 @@ import WorkContent from './WorkClient';
 export const metadata: Metadata = {
 	title: 'Work',
 	description:
-		'Evan Hickman has a rich history of working with various companies and projects, showcasing his expertise in software engineering and development.',
+		'An overview of my professional experience in frontend software engineering.',
 	openGraph: {
 		type: 'website',
 		locale: 'en_US',

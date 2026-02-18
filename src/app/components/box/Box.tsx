@@ -25,7 +25,7 @@ const Box = ({ title, id, classNames, active, onClick }: BoxProps) => {
 					delay: id * 0.1,
 				}}
 				exit={{ x: '100%' }}
-				onClick={() => onClick && onClick(id)}
+				onClick={() => onClick?.(id)}
 				tabIndex={0}
 			>
 				<div className="px-9 lg:pl-40">
