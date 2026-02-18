@@ -1,52 +1,6 @@
-export interface PageContent {
-  heading: string
-  subheading?: string
-  boxes: BoxContent[]
-}
+import type { PageContent } from './types'
 
-export interface BoxContent {
-  id: number
-  title?: string
-  subtitle?: string
-  desc?: string
-  features?: string
-  link?: string
-  image?: string
-  classNames: string
-}
-
-export const homeContent: PageContent = {
-  heading: 'Evan Hickman',
-  subheading: 'Frontend Engineer',
-  boxes: [
-    {
-      id: 1,
-      classNames: 'box-one',
-    },
-    {
-      id: 2,
-      classNames: 'box-two',
-    },
-    {
-      id: 3,
-      classNames: 'box-three',
-    },
-    {
-      id: 4,
-      classNames: 'box-four',
-    },
-    {
-      id: 5,
-      classNames: 'box-five',
-    },
-    {
-      id: 6,
-      classNames: 'box-six',
-    },
-  ],
-}
-
-export const workContent: PageContent = {
+const workContent: PageContent = {
   heading: 'Work',
   subheading: 'Selected projects',
   boxes: [
@@ -127,32 +81,4 @@ export const workContent: PageContent = {
   ],
 }
 
-export const contactContent: PageContent = {
-  heading: 'Contact',
-  boxes: [
-    {
-      id: 1,
-      classNames: 'bg-green-100',
-    },
-    {
-      id: 2,
-      classNames: 'bg-green-200',
-    },
-    {
-      id: 3,
-      classNames: 'bg-green-300',
-    },
-    {
-      id: 4,
-      classNames: 'bg-green-400',
-    },
-    {
-      id: 5,
-      classNames: 'bg-green-500',
-    },
-    {
-      id: 6,
-      classNames: 'bg-green-600',
-    },
-  ],
-}
+export default workContent

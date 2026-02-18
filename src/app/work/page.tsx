@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import BoxContainer from '@/app/components/box/BoxContainer'
 import CardContainer from '@/app/components/card/CardContainer'
-import { workContent as content } from '@/app/lib/pageData'
+import content from '@/lib/content/work'
 
 const Work = () => {
   const [active, setActive] = useState<number | null>(null)
