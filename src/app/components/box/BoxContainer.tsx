@@ -1,5 +1,5 @@
 import Box from '@/app/components/box/Box'
-import { PageContent } from '@/app/_data/page-data'
+import type { PageContent } from '@/lib/content/types'
 
 interface BoxContainerProps {
   boxes: PageContent['boxes']

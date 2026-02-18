@@ -1,8 +1,8 @@
 'use client'
 import { useState } from 'react'
+import BoxContainer from '@/app/components/box/BoxContainer'
 import CardContainer from '@/app/components/card/CardContainer'
-import BoxContainer from '@/app/components/box'
-import { workContent as content } from '@/app/_data'
+import content from '@/lib/content/work'
 
 const Work = () => {
   const [active, setActive] = useState<number | null>(null)
