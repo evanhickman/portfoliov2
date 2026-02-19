@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 		template: '%s | Evan Hickman',
 	},
 	description:
-		'Evan Hickman is an experienced software engineer specializing in React and TypeScript.',
+		'Evan Hickman is an experienced software engineer specializing in React and TypeScript, with a strong focus on building performant and accessible web applications.',
 	metadataBase: new URL('https://evanhickman.com'),
 	openGraph: {
 		type: 'website',

@@ -4,21 +4,21 @@ const workContent: PageContent = {
 	url: '/work',
 	navTitle: 'Work',
 	heading: 'Work',
-	subheading: 'Selected projects',
+	subheading: `Select a project`,
 	boxes: [
-		// {
-		//   id: 0,
-		//   title: "Tractor Supply Co.",
-		//   subtitle: "E-commerce website",
-		//   features:
-		//     "React, TypeScript, Micro-Frontend Architecture, Material UI, Storybook, Jest, React Testing Library, Cypress",
-		//   desc: "As Frontend Tech Lead on the Homepage and Gobal Navigation teams...",
-		//   link: "https://www.tractorsupply.com/",
-		//   image: "/tsc-home.jpg",
-		//   classNames: "bg-indigo-50",
-		// },
 		{
 			id: 1,
+			title: 'Tractor Supply Co.',
+			subtitle: 'E-commerce website',
+			features:
+				'React, TypeScript, Micro-Frontend Architecture, Material UI, Storybook, Jest, React Testing Library, Cypress',
+			desc: 'As Lead Frontend Engineer on the Homepage and Global Navigation teams, I worked with a large team of engineers, UX experts, and business stakeholders to spearhead the migration of a Fortune 300 e-commerce platform to React/Next.js and micro-frontends, cutting LCP by 60% and CLS by 93%, resulting in record-breaking engagement.',
+			link: 'https://www.tractorsupply.com/',
+			image: '/tsc-home.jpg',
+			classNames: 'bg-indigo-50',
+		},
+		{
+			id: 2,
 			title: 'Jane Marketplace',
 			subtitle: 'E-commerce dashboard',
 			features:
@@ -29,18 +29,18 @@ const workContent: PageContent = {
 			classNames: 'bg-indigo-100',
 		},
 		{
-			id: 2,
+			id: 3,
 			title: 'Marigold Marketing',
 			subtitle: 'Lead generation marketing',
 			features:
 				'React, WordPress, Gatsby, Next.js, GraphQL,  CSS Animations, Personalized Content, A/B Testing',
 			link: 'https://meetmarigold.com/',
-			desc: 'I worked with a small team of talented frontend developers to build, maintain, and optimize a suite of high traffic, lead-generation marketing sites. We used React, Gatsby, headless WordPress, and Next.js to build performant, SEO-friendly sites. Using eye-catching CSS animations, personalized content, and rigorous A/B testing, our mission was to continually optimize conversion across all brands.',
+			desc: 'I worked with a small team of talented frontend developers to build, maintain, and optimize a suite of high traffic, lead-generation marketing sites. We used React, Gatsby, headless WordPress, and Next.js to build performant, SEO-optimized sites. Using eye-catching CSS animations, personalized content, and rigorous A/B testing, our mission was to continually optimize conversion across all brands.',
 			image: '/marigold-home.jpg',
 			classNames: 'bg-indigo-200',
 		},
 		{
-			id: 3,
+			id: 4,
 			title: 'Third Man Records',
 			subtitle: 'Independent record label',
 			features: 'UX Design, SilverStripe CMS, HTML & CSS',
@@ -50,7 +50,7 @@ const workContent: PageContent = {
 			classNames: 'bg-indigo-300',
 		},
 		{
-			id: 4,
+			id: 5,
 			title: 'Jack White',
 			subtitle: 'Artist website',
 			features: 'Responsive design, WordPress, HTML & CSS, jQuery',
@@ -60,7 +60,7 @@ const workContent: PageContent = {
 			classNames: 'bg-indigo-400',
 		},
 		{
-			id: 5,
+			id: 6,
 			title: 'The Raconteurs',
 			subtitle: 'Artist website',
 			features:
@@ -71,7 +71,7 @@ const workContent: PageContent = {
 			classNames: 'bg-indigo-500',
 		},
 		{
-			id: 6,
+			id: 7,
 			title: 'Third Man Pressing',
 			subtitle: 'Independent record pressing plant',
 			features: 'UX Design, Laravel, Vue.js, Scroll Animations',

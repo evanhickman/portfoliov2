@@ -21,6 +21,7 @@ export default function WorkContent({ content }: WorkClientProps) {
 				content={content}
 				active={active}
 				heading={content.heading}
+				subheading={content.subheading}
 			/>
 			<BoxContainer boxes={content.boxes} active={active} onClick={onClick} />
 		</>
