@@ -8,50 +8,74 @@ interface BoxProps {
 	onClick?: (id: number) => void;
 }
 
+const ANIMATION_CONFIG = {
+	initial: { x: '100%' },
+	animate: { x: 0 },
+	exit: { x: '100%' },
+};
+
 export default function Box({ boxes, active, onClick }: BoxProps) {
-	console.log(boxes);
 	return (
-		<section
-			className={`row-span-1 lg:row-span-0 lg:h-screen grid grid-cols-1 grid-rows-${boxes.length} gap-1.5`}
-		>
+		<section className="row-span-1 lg:row-span-0 lg:h-screen grid grid-cols-1 gap-1.5">
 			<AnimatePresence>
 				{boxes.map((box) => (
-					<motion.div
+					<BoxItem
 						key={box.id}
-						className={`${
-							active === box.id ? 'bg-black-900' : box.classNames
-						} flex flex-col justify-center row-span-1 z-50 ${onClick ? 'cursor-pointer' : ''} transition-colors focus-visible:outline-yellow-500 focus-visible:outline-2 focus-visible:outline-offset-2`}
-						initial={{ x: '100%' }}
-						animate={{ x: 0 }}
-						transition={{
-							type: 'spring',
-							duration: 0.6,
-							delay: box.id * 0.1,
-						}}
-						exit={{ x: '100%' }}
+						box={box}
+						isActive={active === box.id}
+						isClickable={!!onClick}
 						onClick={() => onClick?.(box.id)}
-						tabIndex={onClick ? 0 : -1}
-						role={onClick ? 'button' : undefined}
-						onKeyDown={(e) => {
-							if (onClick && (e.key === 'Enter' || e.key === ' ')) {
-								onClick(box.id);
-							}
-						}}
-					>
-						<div className="px-9 lg:pl-40">
-							{box.title && (
-								<h2
-									className={`${
-										active === box.id ? 'text-black-50' : 'text-black-900'
-									} text-2xl`}
-								>
-									{box.title}
-								</h2>
-							)}
-						</div>
-					</motion.div>
+					/>
 				))}
 			</AnimatePresence>
 		</section>
+	);
+}
+
+interface BoxItemProps {
+	box: PageContent['boxes'][0];
+	isActive: boolean;
+	isClickable: boolean;
+	onClick: () => void;
+}
+
+function BoxItem({ box, isActive, isClickable, onClick }: BoxItemProps) {
+	const handleKeyDown = (e: React.KeyboardEvent) => {
+		if (e.key === 'Enter' || e.key === ' ') {
+			onClick();
+		}
+	};
+
+	return (
+		<motion.div
+			{...ANIMATION_CONFIG}
+			transition={{
+				type: 'spring',
+				duration: 0.6,
+				delay: box.id * 0.1,
+			}}
+			className={`
+                flex flex-col justify-center row-span-1 z-50 transition-colors
+                ${isActive ? 'bg-black-900' : box.classNames}
+                ${isClickable ? 'cursor-pointer' : ''}
+                focus-visible:outline-yellow-500 focus-visible:outline-2 focus-visible:outline-offset-2
+            `}
+			onClick={onClick}
+			onKeyDown={handleKeyDown}
+			tabIndex={isClickable ? 0 : -1}
+			role={isClickable ? 'button' : undefined}
+		>
+			{box.title && (
+				<div className="px-9 lg:pl-40">
+					<h2
+						className={`text-2xl ${
+							isActive ? 'text-black-50' : 'text-black-900'
+						}`}
+					>
+						{box.title}
+					</h2>
+				</div>
+			)}
+		</motion.div>
 	);
 }

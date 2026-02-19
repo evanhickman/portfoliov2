@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { NAV_LINKS } from '@/lib/hooks/useContent';
+import { NAV_LINKS } from '@/lib/content/nav';
 
 export default function Header() {
 	return (
