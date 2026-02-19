@@ -1,22 +1,21 @@
-'use client'
-import { useState } from 'react'
-import BoxContainer from '@/app/components/box/BoxContainer'
-import CardContainer from '@/app/components/card/CardContainer'
-import content from '@/lib/content/work'
+import type { Metadata } from 'next';
+import content from '@/lib/content/work';
+import WorkContent from './WorkClient';
+
+export const metadata: Metadata = {
+	title: 'Work',
+	description:
+		'An overview of my professional experience in frontend software engineering.',
+	openGraph: {
+		type: 'website',
+		locale: 'en_US',
+		url: 'https://evanhickman.com/work',
+		siteName: 'Evan Hickman',
+	},
+};
 
 const Work = () => {
-  const [active, setActive] = useState<number | null>(null)
+	return <WorkContent content={content} />;
+};
 
-  const onClick = (id: number) => {
-    setActive((prevId) => (prevId === id ? null : id))
-  }
-
-  return (
-    <main>
-      <CardContainer content={content} active={active} heading="Work" />
-      <BoxContainer boxes={content.boxes} active={active} onClick={onClick} />
-    </main>
-  )
-}
-
-export default Work
+export default Work;

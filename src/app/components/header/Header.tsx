@@ -4,7 +4,7 @@ import homeContent from '@/lib/content/home';
 import workContent from '@/lib/content/work';
 
 const Header = () => {
-	const navLinks = [
+	const NAV_LINKS = [
 		{
 			name: homeContent.navTitle,
 			link: homeContent.url,
@@ -17,15 +17,22 @@ const Header = () => {
 			name: contactContent.navTitle,
 			link: contactContent.url,
 		},
-	];
+	] as const;
 
 	return (
-		<header className="fixed w-screen top-0 h-16 px-12 flex flex-col justify-center z-30 bg-transparent backdrop-blur-lg">
-			<nav>
-				<ul className="flex justify-between lg:justify-start">
-					{navLinks.map((link) => (
-						<li className="pr-0 lg:pr-8" key={link.link}>
-							<Link href={link.link} className="text-2xl text-black-50">
+		<header className="fixed inset-x-0 top-0 z-30 h-16 bg-transparent backdrop-blur-lg">
+			<nav
+				className="flex h-full items-center px-12"
+				aria-label="Main navigation"
+			>
+				<ul className="flex w-full justify-between gap-8 lg:justify-start">
+					{NAV_LINKS.map((link) => (
+						<li key={link.link}>
+							<Link
+								href={link.link}
+								className="text-2xl text-black-50"
+								aria-current={link.link === '/' ? 'page' : undefined}
+							>
 								{link.name}
 							</Link>
 						</li>
