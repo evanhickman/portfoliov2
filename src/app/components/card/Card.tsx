@@ -35,10 +35,11 @@ export default function Card({
 			{link && (
 				<Link
 					href={link}
-					className="mt-3 border-solid border-cyan-100 color-shift-text hover:underline"
+					className="w-fit mt-3 border-solid border-cyan-100 color-shift-text hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500 rounded"
 					target="_blank"
 					rel="noopener noreferrer"
 					title="Open link in a new tab"
+					tabIndex={0}
 				>
 					<span className="flex items-center gap-1">
 						View Site

@@ -26,7 +26,7 @@ const Box = ({ title, id, classNames, active, onClick }: BoxProps) => {
 				}}
 				exit={{ x: '100%' }}
 				onClick={() => onClick?.(id)}
-				tabIndex={0}
+				tabIndex={onClick ? 0 : undefined}
 				role={onClick ? 'button' : undefined}
 				onKeyDown={(e) => {
 					if (onClick && (e.key === 'Enter' || e.key === ' ')) {
