@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import content from '@/lib/content/work';
-import WorkContent from './WorkClient';
+import WorkClient from './WorkClient';
 
 export const metadata: Metadata = {
 	title: 'Work',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 const Work = () => {
-	return <WorkContent content={content} />;
+	return <WorkClient content={content} />;
 };
 
 export default Work;
