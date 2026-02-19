@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
-import BoxContainer from '@/app/components/box/BoxContainer';
-import CardContainer from '@/app/components/card/CardContainer';
+import Box from '@/app/components/Box';
+import Card from '@/app/components/Card';
 import type { PageContent } from '@/lib/content/types';
 
 interface WorkClientProps {
@@ -17,13 +17,13 @@ export default function WorkContent({ content }: WorkClientProps) {
 
 	return (
 		<>
-			<CardContainer
+			<Card
 				content={content}
 				active={active}
 				heading={content.heading}
 				subheading={content.subheading}
 			/>
-			<BoxContainer boxes={content.boxes} active={active} onClick={onClick} />
+			<Box boxes={content.boxes} active={active} onClick={onClick} />
 		</>
 	);
 }

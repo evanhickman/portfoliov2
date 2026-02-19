@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import BoxContainer from '@/app/components/box/BoxContainer';
-import CardContainer from '@/app/components/card/CardContainer';
+import Box from '@/app/components/Box';
+import Card from '@/app/components/Card';
 import content from '@/lib/content/contact';
 
 export const metadata: Metadata = {
@@ -18,13 +18,13 @@ export const metadata: Metadata = {
 const Contact = () => {
 	return (
 		<>
-			<CardContainer
+			<Card
 				content={content}
 				heading={content.heading}
 				subheading={content.subheading}
 				active={null}
 			/>
-			<BoxContainer boxes={content.boxes} active={null} />
+			<Box boxes={content.boxes} active={null} />
 		</>
 	);
 };

@@ -1,0 +1,106 @@
+'use client';
+import { AnimatePresence, motion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
+import type { PageContent } from '@/lib/content/types';
+
+interface CardProps {
+	heading: string;
+	subheading?: string;
+	content: PageContent;
+	active: number | null;
+}
+
+export default function Card({
+	heading,
+	subheading,
+	content,
+	active,
+}: CardProps) {
+	const activeBox = content?.boxes?.find((box) => box.id === active);
+
+	return (
+		<div
+			className={`row-span-2 lg:row-span-0 lg:max-h-screen flex flex-col justify-center px-12 pt-24 pb-12 ${
+				active !== null && 'overflow-scroll'
+			}`}
+		>
+			<AnimatePresence mode="wait">
+				{active === null ? (
+					<motion.div
+						className="h-full flex flex-col justify-center"
+						initial={{ y: '100%' }}
+						animate={{ y: 0 }}
+						exit={{ opacity: '0' }}
+						transition={{ type: 'spring', duration: 0.5 }}
+						layout
+						key="title-container"
+					>
+						<h1 className="text-5xl">{heading}</h1>
+						{subheading && (
+							<h2 className="text-4xl mt-3 color-shift-text">{subheading}</h2>
+						)}
+					</motion.div>
+				) : (
+					<motion.div
+						className="h-full flex flex-col overflow-scroll"
+						initial={{ y: '100%' }}
+						animate={{ y: 0 }}
+						exit={{ opacity: '0' }}
+						transition={{ type: 'spring', duration: 0.5 }}
+						key={activeBox?.id}
+						layout
+					>
+						{activeBox?.title && (
+							<h1 className="text-5xl">{activeBox.title}</h1>
+						)}
+						{activeBox?.subtitle && (
+							<h2 className="text-3xl mt-3 color">{activeBox.subtitle}</h2>
+						)}
+						{activeBox?.link && (
+							<Link
+								href={activeBox.link}
+								className="w-fit mt-3 border-solid border-cyan-100 color-shift-text hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500 rounded"
+								target="_blank"
+								rel="noopener noreferrer"
+								title="Open link in a new tab"
+							>
+								<span className="flex items-center gap-1">
+									View Site
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										strokeWidth="1.5"
+										stroke="currentColor"
+										className="size-4"
+									>
+										<title>Open link in a new tab</title>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+										/>
+									</svg>
+								</span>
+							</Link>
+						)}
+						{activeBox?.image && (
+							<Image
+								src={activeBox.image}
+								alt={`Screenshot of ${activeBox.title}`}
+								className="mt-6 rounded-md shadow-md"
+								width={1500}
+								height={780}
+							/>
+						)}
+						{activeBox?.features && (
+							<p className="mt-6 italic">{activeBox.features}</p>
+						)}
+						{activeBox?.desc && <p className="mt-3">{activeBox.desc}</p>}
+					</motion.div>
+				)}
+			</AnimatePresence>
+		</div>
+	);
+}
