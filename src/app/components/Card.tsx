@@ -111,7 +111,7 @@ function ExternalLink({ title, link, linkTitle }: ExternalLinkProps) {
 	return (
 		<Link
 			href={link || '#'}
-			className="w-fit mt-3 border-solid border-cyan-100 color-shift-text hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500 rounded"
+			className="w-fit mt-3 border-solid border-cyan-100 underline underline-offset-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500 rounded"
 			target="_blank"
 			rel="noopener noreferrer"
 			title={`Open ${title} in a new tab`}
