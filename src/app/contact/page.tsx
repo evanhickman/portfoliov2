@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
-import BoxContainer from '@/app/components/box/BoxContainer';
-import CardContainer from '@/app/components/card/CardContainer';
+import PageClient from '@/app/components/PageClient';
 import content from '@/lib/content/contact';
 
 export const metadata: Metadata = {
@@ -16,17 +15,7 @@ export const metadata: Metadata = {
 };
 
 const Contact = () => {
-	return (
-		<>
-			<CardContainer
-				content={content}
-				heading={content.heading}
-				subheading={content.subheading}
-				active={null}
-			/>
-			<BoxContainer boxes={content.boxes} active={null} />
-		</>
-	);
+	return <PageClient content={content} />;
 };
 
 export default Contact;

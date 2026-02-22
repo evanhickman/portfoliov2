@@ -1,17 +1,17 @@
-import BoxContainer from '@/app/components/box/BoxContainer';
-import CardContainer from '@/app/components/card/CardContainer';
+import Card from '@/app/components/Card';
 import content from '@/lib/content/home';
+import Boxes from './components/BoxGroup';
 
 const Home = () => {
 	return (
 		<>
-			<CardContainer
+			<Card
 				content={content}
 				active={null}
 				heading={content.heading}
 				subheading={content.subheading}
 			/>
-			<BoxContainer boxes={content.boxes} active={null} />
+			<Boxes boxes={content.boxes} active={null} />
 		</>
 	);
 };

@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { Urbanist } from 'next/font/google';
 import './globals.css';
-import Header from '@/app/components/header/Header';
+import Header from '@/app/components/Header';
 
-const urban = Urbanist({ subsets: ['latin'] });
+const urban = Urbanist({ subsets: ['latin'], display: 'swap' });
 
 export const metadata: Metadata = {
 	title: {
@@ -18,6 +18,20 @@ export const metadata: Metadata = {
 		locale: 'en_US',
 		url: 'https://evanhickman.com',
 		siteName: 'Evan Hickman',
+		images: [
+			{
+				url: 'https://evanhickman.com/og.png',
+				width: 1200,
+				height: 630,
+			},
+		],
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: 'Evan Hickman',
+		description:
+			'Evan Hickman is an experienced software engineer specializing in React and TypeScript, with a strong focus on building performant and accessible web applications.',
+		images: ['https://evanhickman.com/og.png'],
 	},
 	icons: {
 		icon: '/favicon.ico',

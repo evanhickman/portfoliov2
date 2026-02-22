@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
+import PageClient from '@/app/components/PageClient';
 import content from '@/lib/content/work';
-import WorkContent from './WorkClient';
 
 export const metadata: Metadata = {
 	title: 'Work',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 const Work = () => {
-	return <WorkContent content={content} />;
+	return <PageClient content={content} />;
 };
 
 export default Work;
