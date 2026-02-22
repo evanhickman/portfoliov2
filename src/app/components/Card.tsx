@@ -14,7 +14,7 @@ interface CardProps {
 const ANIMATION_CONFIG = {
 	initial: { y: '100%' },
 	animate: { y: 0 },
-	exit: { opacity: '0' },
+	exit: { opacity: 0 },
 	transition: { type: 'spring' as const, duration: 0.5 },
 };
 
@@ -30,7 +30,7 @@ export default function Card({
 	return (
 		<div
 			className={`row-span-2 lg:row-span-0 lg:max-h-screen flex flex-col justify-center px-12 pt-24 pb-12 ${
-				isActive && 'overflow-scroll'
+				isActive && 'overflow-y-auto'
 			}`}
 		>
 			<AnimatePresence mode="wait">
@@ -78,8 +78,14 @@ function ContentView({ box }: ContentViewProps) {
 			layout
 		>
 			<h1 className="text-5xl">{box.title}</h1>
-			{box.subtitle && <h2 className="text-3xl mt-3 color">{box.subtitle}</h2>}
-			{box.link && <ExternalLink href={box.link} title={box?.title} />}
+			{box.subtitle && <h2 className="text-3xl mt-3">{box.subtitle}</h2>}
+			{box.link && (
+				<ExternalLink
+					link={box.link}
+					title={box?.title}
+					linkTitle={box?.linkTitle}
+				/>
+			)}
 			{box.image && (
 				<Image
 					src={box.image}
@@ -96,14 +102,15 @@ function ContentView({ box }: ContentViewProps) {
 }
 
 interface ExternalLinkProps {
-	href: string;
 	title?: string;
+	link?: string;
+	linkTitle?: string;
 }
 
-function ExternalLink({ href, title }: ExternalLinkProps) {
+function ExternalLink({ title, link, linkTitle }: ExternalLinkProps) {
 	return (
 		<Link
-			href={href}
+			href={link || '#'}
 			className="w-fit mt-3 border-solid border-cyan-100 color-shift-text hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-500 rounded"
 			target="_blank"
 			rel="noopener noreferrer"
@@ -111,7 +118,7 @@ function ExternalLink({ href, title }: ExternalLinkProps) {
 			aria-label={`View ${title} site`}
 		>
 			<span className="flex items-center gap-1">
-				View Site
+				{linkTitle || `Visit ${title}`}
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"

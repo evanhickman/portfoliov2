@@ -1,14 +1,14 @@
 'use client';
 import { useState } from 'react';
-import Box from '@/app/components/Box';
-import Card from '@/app/components/Card';
 import type { PageContent } from '@/lib/content/types';
+import Box from './Box';
+import Card from './Card';
 
-interface WorkClientProps {
+interface PageClientProps {
 	content: PageContent;
 }
 
-export default function WorkContent({ content }: WorkClientProps) {
+export default function PageClient({ content }: PageClientProps) {
 	const [active, setActive] = useState<number | null>(null);
 
 	const onClick = (id: number) => {

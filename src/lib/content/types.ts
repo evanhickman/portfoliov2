@@ -5,6 +5,7 @@ export interface BoxContent {
 	desc?: string;
 	features?: string;
 	link?: string;
+	linkTitle?: string;
 	image?: string;
 	classNames: string;
 }
