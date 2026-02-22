@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import type { PageContent } from '@/lib/content/types';
-import Boxes from './Boxes';
+import BoxGroup from './BoxGroup';
 import Card from './Card';
 
 interface PageClientProps {
@@ -31,7 +31,7 @@ export default function PageClient({ content }: PageClientProps) {
 				heading={content.heading}
 				subheading={content.subheading}
 			/>
-			<Boxes boxes={content.boxes} active={active} onClick={onClick} />
+			<BoxGroup boxes={content.boxes} active={active} onClick={onClick} />
 		</>
 	);
 }

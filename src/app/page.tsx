@@ -1,6 +1,6 @@
 import Card from '@/app/components/Card';
 import content from '@/lib/content/home';
-import Boxes from './components/Boxes';
+import Boxes from './components/BoxGroup';
 
 const Home = () => {
 	return (
