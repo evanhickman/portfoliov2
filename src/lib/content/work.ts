@@ -16,6 +16,7 @@ const workContent: PageContent = {
 			image: '/tsc-home.jpg',
 			link: 'https://www.tractorsupply.com/',
 			classNames: 'bg-indigo-50',
+			color: '#eef2ff',
 		},
 		{
 			id: 2,
@@ -27,6 +28,7 @@ const workContent: PageContent = {
 			image: '/jane-home.jpg',
 			link: 'https://www.jane.com',
 			classNames: 'bg-indigo-100',
+			color: '#e0e7ff',
 		},
 		{
 			id: 3,
@@ -38,6 +40,7 @@ const workContent: PageContent = {
 			image: '/marigold-home.jpg',
 			link: 'https://meetmarigold.com/',
 			classNames: 'bg-indigo-200',
+			color: '#c7d2fe',
 		},
 		{
 			id: 4,
@@ -48,6 +51,7 @@ const workContent: PageContent = {
 			image: '/tmr-home.jpg',
 			link: 'https://thirdmanrecords.com/',
 			classNames: 'bg-indigo-300',
+			color: '#a5b4fc',
 		},
 		{
 			id: 5,
@@ -58,6 +62,7 @@ const workContent: PageContent = {
 			image: '/jw-home.jpg',
 			link: 'https://jackwhiteiii.com/',
 			classNames: 'bg-indigo-400',
+			color: '#818cf8',
 		},
 		{
 			id: 6,
@@ -69,6 +74,7 @@ const workContent: PageContent = {
 			image: '/racs-home.jpg',
 			link: 'https://theraconteurs.com/',
 			classNames: 'bg-indigo-500',
+			color: '#6366f1',
 		},
 		{
 			id: 7,
@@ -79,6 +85,7 @@ const workContent: PageContent = {
 			image: '/tmp-home.jpg',
 			link: 'https://thirdmanpressing.com/',
 			classNames: 'bg-indigo-600',
+			color: '#4f46e5',
 		},
 	],
 };

@@ -1,6 +1,8 @@
 'use client';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import type { PageContent } from '@/lib/content/types';
+
+const ACTIVE_COLOR = '#171717';
 
 interface BoxProps {
 	boxes: PageContent['boxes'];
@@ -8,26 +10,18 @@ interface BoxProps {
 	onClick?: (id: number) => void;
 }
 
-const ANIMATION_CONFIG = {
-	initial: { x: '100%' },
-	animate: { x: 0 },
-	exit: { x: '100%' },
-};
-
-export default function Box({ boxes, active, onClick }: BoxProps) {
+export default function Boxes({ boxes, active, onClick }: BoxProps) {
 	return (
 		<section className="row-span-1 lg:row-span-0 lg:h-screen grid grid-cols-1 gap-1.5">
-			<AnimatePresence>
-				{boxes.map((box) => (
-					<BoxItem
-						key={box.id}
-						box={box}
-						isActive={active === box.id}
-						isClickable={!!onClick}
-						onClick={() => onClick?.(box.id)}
-					/>
-				))}
-			</AnimatePresence>
+			{boxes.map((box) => (
+				<BoxItem
+					key={box.id}
+					box={box}
+					isActive={active === box.id}
+					isClickable={!!onClick}
+					onClick={() => onClick?.(box.id)}
+				/>
+			))}
 		</section>
 	);
 }
@@ -48,15 +42,18 @@ function BoxItem({ box, isActive, isClickable, onClick }: BoxItemProps) {
 
 	return (
 		<motion.div
-			{...ANIMATION_CONFIG}
+			initial={{ x: '100%', backgroundColor: box.color }}
+			animate={{
+				x: 0,
+				backgroundColor: isActive ? ACTIVE_COLOR : box.color,
+			}}
 			transition={{
-				type: 'spring',
-				duration: 0.6,
-				delay: box.id * 0.1,
+				x: { type: 'spring', duration: 0.6, delay: box.id * 0.1 },
+				backgroundColor: { duration: 0.2 },
 			}}
 			className={`
-                flex flex-col justify-center row-span-1 z-50 transition-colors
-                ${isActive ? 'bg-black-900' : box.classNames}
+                flex flex-col justify-center row-span-1 z-50
+                ${box.color ? '' : box.classNames}
                 ${isClickable ? 'cursor-pointer' : ''}
                 focus-visible:outline-yellow-500 focus-visible:outline-2 focus-visible:outline-offset-2
             `}

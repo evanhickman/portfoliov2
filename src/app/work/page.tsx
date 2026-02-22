@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import content from '@/lib/content/work';
 import PageClient from '@/app/components/PageClient';
+import content from '@/lib/content/work';
 
 export const metadata: Metadata = {
 	title: 'Work',

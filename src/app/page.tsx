@@ -1,6 +1,6 @@
 import Card from '@/app/components/Card';
 import content from '@/lib/content/home';
-import Box from './components/Box';
+import Boxes from './components/Boxes';
 
 const Home = () => {
 	return (
@@ -11,7 +11,7 @@ const Home = () => {
 				heading={content.heading}
 				subheading={content.subheading}
 			/>
-			<Box boxes={content.boxes} active={null} />
+			<Boxes boxes={content.boxes} active={null} />
 		</>
 	);
 };

@@ -8,6 +8,7 @@ export interface BoxContent {
 	linkTitle?: string;
 	image?: string;
 	classNames: string;
+	color?: string;
 }
 
 export interface PageContent {

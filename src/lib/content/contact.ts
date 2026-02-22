@@ -14,6 +14,7 @@ const contactContent: PageContent = {
 			link: 'https://www.linkedin.com/in/evanhickman/',
 			linkTitle: 'View LinkedIn Profile',
 			classNames: 'bg-green-200',
+			color: '#bbf7d0',
 		},
 		{
 			id: 2,
@@ -23,6 +24,7 @@ const contactContent: PageContent = {
 			link: 'https://github.com/evanhickman',
 			linkTitle: 'View GitHub Profile',
 			classNames: 'bg-green-300',
+			color: '#86efac',
 		},
 		{
 			id: 3,
@@ -32,6 +34,7 @@ const contactContent: PageContent = {
 			link: 'mailto:hello@evanhickman.com',
 			linkTitle: 'Send Email',
 			classNames: 'bg-green-400',
+			color: '#4ade80',
 		},
 	],
 };
