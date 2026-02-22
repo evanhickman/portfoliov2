@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { PageContent } from '@/lib/content/types';
 import Boxes from './Boxes';
 import Card from './Card';
@@ -14,6 +14,14 @@ export default function PageClient({ content }: PageClientProps) {
 	const onClick = (id: number) => {
 		setActive((prevId) => (prevId === id ? null : id));
 	};
+
+	useEffect(() => {
+		const handleKeyDown = (e: KeyboardEvent) => {
+			if (e.key === 'Escape') setActive(null);
+		};
+		document.addEventListener('keydown', handleKeyDown);
+		return () => document.removeEventListener('keydown', handleKeyDown);
+	}, []);
 
 	return (
 		<>

@@ -10,7 +10,6 @@ export default function Header() {
 			<nav
 				className="flex h-full items-center px-12"
 				aria-label="Main navigation"
-				tabIndex={-1}
 			>
 				<ul className="flex w-full justify-between gap-8 lg:justify-start">
 					{NAV_LINKS.map((link) => {

@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
 		ignoreBuildErrors: false,
 		tsconfigPath: 'tsconfig.json',
 	},
+	experimental: {
+		optimizePackageImports: ['framer-motion'],
+	},
 };
 
 export default nextConfig;
