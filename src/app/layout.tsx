@@ -18,6 +18,8 @@ export const metadata: Metadata = {
 		locale: 'en_US',
 		url: 'https://evanhickman.com',
 		siteName: 'Evan Hickman',
+		description:
+			'Evan Hickman is an experienced software engineer specializing in React and TypeScript, with a strong focus on building performant and accessible web applications.',
 		images: [
 			{
 				url: 'https://evanhickman.com/og.png',
