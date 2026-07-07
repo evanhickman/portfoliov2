@@ -13,26 +13,29 @@ export const metadata: Metadata = {
 	description:
 		'Evan Hickman is an experienced software engineer specializing in React and TypeScript, with a strong focus on building performant and accessible web applications.',
 	metadataBase: new URL('https://evanhickman.com'),
+	keywords: ['React', 'TypeScript', 'Next.js', 'Frontend Engineer', 'Evan Hickman', 'Software Engineer'],
+	authors: [{ name: 'Evan Hickman', url: 'https://evanhickman.com' }],
+	alternates: {
+		canonical: '/',
+	},
 	openGraph: {
 		type: 'website',
 		locale: 'en_US',
 		url: 'https://evanhickman.com',
 		siteName: 'Evan Hickman',
-		description:
-			'Evan Hickman is an experienced software engineer specializing in React and TypeScript, with a strong focus on building performant and accessible web applications.',
+		title: 'Evan Hickman',
 		images: [
 			{
 				url: 'https://evanhickman.com/og.png',
 				width: 1200,
 				height: 630,
+				alt: 'Evan Hickman — Frontend Engineer',
 			},
 		],
 	},
 	twitter: {
 		card: 'summary_large_image',
 		title: 'Evan Hickman',
-		description:
-			'Evan Hickman is an experienced software engineer specializing in React and TypeScript, with a strong focus on building performant and accessible web applications.',
 		images: ['https://evanhickman.com/og.png'],
 	},
 	icons: {
@@ -51,7 +54,7 @@ const personSchema = {
 		'https://github.com/evanhickman',
 	],
 	email: 'hello@evanhickman.com',
-	knowsAbout: ['React', 'TypeScript', 'Next.js', 'Frontend Engineering'],
+	knowsAbout: ['React', 'TypeScript', 'Next.js', 'Frontend Engineering', 'Web Performance', 'Accessibility', 'JavaScript', 'CSS'],
 };
 
 export default function RootLayout({
