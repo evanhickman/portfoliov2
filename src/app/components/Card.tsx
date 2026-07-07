@@ -40,6 +40,30 @@ export default function Card({
 					<ContentView key={activeBox?.id} box={activeBox} />
 				)}
 			</AnimatePresence>
+			<CrawlableContent boxes={content?.boxes} />
+		</div>
+	);
+}
+
+function CrawlableContent({ boxes }: { boxes?: PageContent['boxes'] }) {
+	const boxesWithContent = boxes?.filter((box) => box.title);
+	if (!boxesWithContent?.length) return null;
+
+	return (
+		<div className="sr-only">
+			{boxesWithContent.map((box) => (
+				<article key={box.id}>
+					<h3>{box.title}</h3>
+					{box.subtitle && <p>{box.subtitle}</p>}
+					{box.features && <p>{box.features}</p>}
+					{box.desc && <p>{box.desc}</p>}
+					{box.link && (
+						<a href={box.link} target="_blank" rel="noopener noreferrer">
+							{box.linkTitle || `Visit ${box.title}`}
+						</a>
+					)}
+				</article>
+			))}
 		</div>
 	);
 }
