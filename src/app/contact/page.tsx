@@ -6,11 +6,22 @@ export const metadata: Metadata = {
 	title: 'Contact',
 	description:
 		'Ways to get in touch with me, including email and social media links.',
+	alternates: {
+		canonical: '/contact',
+	},
 	openGraph: {
 		type: 'website',
 		locale: 'en_US',
 		url: 'https://evanhickman.com/contact',
 		siteName: 'Evan Hickman',
+		images: [
+			{
+				url: 'https://evanhickman.com/og.png',
+				width: 1200,
+				height: 630,
+				alt: 'Evan Hickman — Frontend Engineer',
+			},
+		],
 	},
 };
 

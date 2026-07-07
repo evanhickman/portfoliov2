@@ -1,5 +1,5 @@
 'use client';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import Image from 'next/image';
 import type { PageContent } from '@/lib/content/types';
 import ExternalLink from './ExternalLink';
@@ -18,6 +18,13 @@ const ANIMATION_CONFIG = {
 	transition: { type: 'spring' as const, duration: 0.5 },
 };
 
+const REDUCED_ANIMATION_CONFIG = {
+	initial: { opacity: 0 },
+	animate: { opacity: 1 },
+	exit: { opacity: 0 },
+	transition: { duration: 0.01 },
+};
+
 export default function Card({
 	heading,
 	subheading,
@@ -32,6 +39,7 @@ export default function Card({
 			className={`row-span-2 lg:row-span-0 lg:max-h-screen flex flex-col justify-center px-12 pt-24 pb-12 ${
 				isActive && 'overflow-y-auto'
 			}`}
+			aria-live="polite"
 		>
 			<AnimatePresence mode="wait">
 				{!isActive ? (
@@ -40,6 +48,35 @@ export default function Card({
 					<ContentView key={activeBox?.id} box={activeBox} />
 				)}
 			</AnimatePresence>
+			<CrawlableContent boxes={content?.boxes} />
+		</div>
+	);
+}
+
+function CrawlableContent({ boxes }: { boxes?: PageContent['boxes'] }) {
+	const boxesWithContent = boxes?.filter((box) => box.title);
+	if (!boxesWithContent?.length) return null;
+
+	return (
+		<div className="sr-only" aria-hidden="true">
+			{boxesWithContent.map((box) => (
+				<article key={box.id}>
+					<h3>{box.title}</h3>
+					{box.subtitle && <p>{box.subtitle}</p>}
+					{box.features && <p>{box.features}</p>}
+					{box.desc && <p>{box.desc}</p>}
+					{box.link && (
+						<a
+							href={box.link}
+							target="_blank"
+							rel="noopener noreferrer"
+							tabIndex={-1}
+						>
+							{box.linkTitle || `Visit ${box.title}`}
+						</a>
+					)}
+				</article>
+			))}
 		</div>
 	);
 }
@@ -50,10 +87,11 @@ interface TitleViewProps {
 }
 
 function TitleView({ heading, subheading }: TitleViewProps) {
+	const shouldReduceMotion = useReducedMotion();
 	return (
 		<motion.div
 			className="h-full flex flex-col justify-center"
-			{...ANIMATION_CONFIG}
+			{...(shouldReduceMotion ? REDUCED_ANIMATION_CONFIG : ANIMATION_CONFIG)}
 			layout
 		>
 			<h1 className="text-5xl">{heading}</h1>
@@ -69,12 +107,13 @@ interface ContentViewProps {
 }
 
 function ContentView({ box }: ContentViewProps) {
+	const shouldReduceMotion = useReducedMotion();
 	if (!box) return null;
 
 	return (
 		<motion.div
 			className="h-full flex flex-col overflow-scroll"
-			{...ANIMATION_CONFIG}
+			{...(shouldReduceMotion ? REDUCED_ANIMATION_CONFIG : ANIMATION_CONFIG)}
 			layout
 		>
 			<h1 className="text-5xl">{box.title}</h1>
