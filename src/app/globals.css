@@ -334,5 +334,17 @@
     }
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    .box-one,
+    .box-two,
+    .box-three,
+    .box-four,
+    .box-five,
+    .box-six,
+    .color-shift-text {
+      animation: none;
+    }
+  }
+
   /* END ANIMATIONS */
 }

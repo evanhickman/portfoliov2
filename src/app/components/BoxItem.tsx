@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import type { PageContent } from '@/lib/content/types';
 
 const ACTIVE_COLOR = '#171717';
@@ -16,14 +16,22 @@ export default function BoxItem({
 	isClickable,
 	onClick,
 }: BoxItemProps) {
+	const shouldReduceMotion = useReducedMotion();
 	const sharedMotionProps = {
-		initial: { x: '100%', backgroundColor: box.color },
+		initial: {
+			x: shouldReduceMotion ? 0 : '100%',
+			backgroundColor: box.color,
+		},
 		animate: {
 			x: 0,
 			backgroundColor: isActive ? ACTIVE_COLOR : box.color,
 		},
 		transition: {
-			x: { type: 'spring' as const, duration: 0.6, delay: box.id * 0.1 },
+			x: {
+				type: 'spring' as const,
+				duration: shouldReduceMotion ? 0 : 0.6,
+				delay: shouldReduceMotion ? 0 : box.id * 0.1,
+			},
 			backgroundColor: { duration: 0.2 },
 		},
 	};
@@ -68,6 +76,7 @@ export default function BoxItem({
 				{...sharedMotionProps}
 				className={`${sharedClassName} cursor-pointer`}
 				onClick={onClick}
+				aria-pressed={isActive}
 				tabIndex={0}
 			>
 				{content}
