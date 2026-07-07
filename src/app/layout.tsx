@@ -40,6 +40,20 @@ export const metadata: Metadata = {
 	},
 };
 
+const personSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	name: 'Evan Hickman',
+	url: 'https://evanhickman.com',
+	jobTitle: 'Frontend Engineer',
+	sameAs: [
+		'https://www.linkedin.com/in/evanhickman/',
+		'https://github.com/evanhickman',
+	],
+	email: 'hello@evanhickman.com',
+	knowsAbout: ['React', 'TypeScript', 'Next.js', 'Frontend Engineering'],
+};
+
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -47,6 +61,13 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
+			<head>
+				<script
+					type="application/ld+json"
+					// biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+				/>
+			</head>
 			<body className={`${urban.className} bg-neutral-900`}>
 				<Header />
 				<main>{children}</main>
